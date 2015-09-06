@@ -6,11 +6,11 @@ body {
 	background: #f5f5f5;
 	font: 14px sans-serif;
 }
-nav ul, header {
+header {
 	max-width: 1000px;
 	margin: 0 auto;
 }
-header::after, nav ul::after {
+header::after {
 	content: "";
 	display: table;
 	clear: both;
@@ -20,40 +20,20 @@ header::after, nav ul::after {
 
 /* NAV ======================================== */
 nav {
-	background: #444444;
+	float: right;
 }
 nav li {
 	list-style-type: none;
 	float: left;
 }
-nav li:last-of-type { float: right; }
 nav li a{
 	display: block;
 	padding: 20px;
-	color: #cccccc;
+	color: #999999;
 }
 .current a {
 	background: #fe8f01;
 	color: #ffffff;
-}
-
-
-/* SEARCH ======================================== */
-nav form { padding: 0; }
-nav form p { display: inline-block; }
-nav label { display: inline-block; text-indent: -9999px; }
-nav input[type="text"] {
-	display: block;
-	margin: 0 5px;
-	padding: 5px;
-	background: rgba(255, 255, 255, 0.15);
-}
-nav button {
-	border: none;
-	width: 30px;
-	height: 30px;
-	background: url('images/search.jpg') no-repeat center center;
-	text-indent: -9999px;
 }
 
 
