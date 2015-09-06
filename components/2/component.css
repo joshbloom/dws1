@@ -1,0 +1,91 @@
+/* 
+================================================================================
+COMPONENT STYLESHEET
+================================================================================ */
+body {
+	background: #f5f5f5;
+	font: 14px sans-serif;
+}
+nav ul, header {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+header::after, nav ul::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+/* NAV ======================================== */
+nav {
+	background: #444444;
+}
+nav li {
+	list-style-type: none;
+	float: left;
+}
+nav li:last-of-type { float: right; }
+nav li a{
+	display: block;
+	padding: 20px;
+	color: #cccccc;
+}
+.current a {
+	background: #fe8f01;
+	color: #ffffff;
+}
+
+
+/* SEARCH ======================================== */
+nav form { padding: 0; }
+nav form p { display: inline-block; }
+nav label { display: inline-block; text-indent: -9999px; }
+nav input[type="text"] {
+	display: block;
+	margin: 0 5px;
+	padding: 5px;
+	background: rgba(255, 255, 255, 0.15);
+}
+nav button {
+	border: none;
+	width: 30px;
+	height: 30px;
+	background: url('images/search.jpg') no-repeat center center;
+	text-indent: -9999px;
+}
+
+
+/* HEADER ======================================== */
+body > header { padding: 10px; }
+body > header img {
+	width: 150px;
+	height: 40px;
+	background: url('images/ramirez.jpg') no-repeat left center;
+	text-indent: -9999px;
+	float: left;
+}
+
+body > header dl { float: right; }
+body > header dt { display: none; }
+body > header dd { 
+	display: inline-block;
+	padding: 10px 10px 10px 20px;
+	font-size: 80%;
+}
+body > header dd:first-of-type { border-right: solid 1px #dedede; }
+
+#phone { 
+	padding-top: 20px;
+	background: url('images/phone.jpg') no-repeat left center; 
+}
+#phone::before { 
+	content: "Phone:";
+	display: block;
+}
+#location { background: url('images/location.jpg') no-repeat left center; }
+#location::before { 
+	content: "Location:";
+	display: block;
+}
