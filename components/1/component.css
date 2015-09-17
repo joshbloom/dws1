@@ -70,7 +70,7 @@ nav ul ul a {
 }
 
 /* MY ACCOUNT ======================================== */
-a[href*=account] {
+a[href*=cart] {
 	position: relative;
 	display: block;
 	margin: 0 0 0 2rem;
@@ -79,20 +79,20 @@ a[href*=account] {
 	border-radius: 0.5rem;
 	color: #fafafa;
 }
-li:hover a[href*=account] { border-bottom-right-radius: 0; }
-a[href*=account]::before {
+li:hover a[href*=cart] { border-bottom-right-radius: 0; }
+a[href*=cart]::before {
 	content: "";
 	position: absolute; left: -0.75rem; top: calc(50% - 2.5rem);
 	z-index: 1;
 	display: block;
 	width: 5rem;
 	height: 5rem;
-	background: #f5f5f5 url('images/user.png') no-repeat center 110%;
+	background: #f5f5f5 url('images/cart.png') no-repeat center 110%;
 	background-size: 3.5rem;
 	border: solid 0.5rem #444444;
 	border-radius: 50%;
 }
-a[href*=account]::after {
+a[href*=cart]::after {
 	content: "";
 	position: absolute; right: 1rem; bottom: 40%;
 	z-index: 1;
@@ -105,8 +105,8 @@ a[href*=account]::after {
 }
 
 /* MY ACCOUNT == CART VIEW ======================================== */
-nav li:hover a[href*=account] + table { display: block; }
-a[href*=account] + table {
+nav li:hover a[href*=cart] + table { display: block; }
+a[href*=cart] + table {
 	display: none;
 	position: absolute; top: 100%; right: 0;
 	margin: 0;
@@ -116,30 +116,30 @@ a[href*=account] + table {
 	white-space: nowrap;
 	color: #999999;
 }
-a[href*=account] + table tr:nth-of-type(even) { background: #4a4a4a; }
-a[href*=account] + table td { 
+a[href*=cart] + table tr:nth-of-type(even) { background: #4a4a4a; }
+a[href*=cart] + table td { 
 	padding: 0.5rem 1rem;
 	vertical-align: middle;
 }
-a[href*=account] + table td:not(:last-of-type) { padding-right: 1rem; }
-a[href*=account] + table td:last-of-type {
+a[href*=cart] + table td:not(:last-of-type) { padding-right: 1rem; }
+a[href*=cart] + table td:last-of-type {
 	text-align: right;
 	font-weight: 600;
 	color: #f5f5f5;
 }
 
-a[href*=account] + table img {
+a[href*=cart] + table img {
 	display: inline-block;
 	width: 5rem;
 	height: 5rem;
 	background: #444444;
 }
 
-a[href*=account] + table tr:last-of-type td { 
+a[href*=cart] + table tr:last-of-type td { 
 	padding-top: 2rem; 
 	background: #444444;
 }
-a[href*=account] + table a {
+a[href*=cart] + table a {
 	margin: 1rem 0 0 0;
 	padding: 1rem;
 	text-align: center;
