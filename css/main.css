@@ -1,11 +1,11 @@
 /* Project CSS 
 ============================================================
 ============================================================*/
-
+html { font-size: 62.5%; }
 body {
 	margin: 0;
 	background: #222222;
-	font: 16px/20px sans-serif;
+	font: 1.6em/1.4 sans-serif;
 	color: #999999;
 	font-weight: 100;
 }
@@ -119,11 +119,40 @@ article img	{
 	border: solid 2px #eaeaea;
 }
 
-.button {
+.buttons li {
+	position: relative;
+	list-style-type: none;
 	display: inline-block;
-	padding: 10px;
-	background-color: #fabe0a;
+}
+.buttons a {
+	display: block;
+	padding: 1rem;
+	background-color: #cccccc;
 	color: #fafafa;
 	text-transform: uppercase;
 	text-decoration: none;
+}
+.buttons a[href*=components] {
+	background-color: #fabe0a;
+}
+
+/* DROP-DOWN ============================== */
+.buttons li:hover ul { display: block; }
+.buttons li ul {
+	display: none;
+	position: absolute; top: 100%; left: 0;
+	z-index: 1;
+	margin-left: 0;
+}
+.buttons ul li {
+	width: 100%;
+	border-left: none;
+	white-space: nowrap;
+}
+.buttons ul a {
+	margin: 0;
+	padding: 0.5rem 1rem 0.5rem 4rem;
+	font-weight: 400;
+	background: #cccccc url('images/arrow165.png') no-repeat 1rem center;
+	background-size: 1.5rem;
 }

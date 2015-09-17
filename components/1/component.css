@@ -2,13 +2,15 @@
 ================================================================================
 COMPONENT STYLESHEET
 ================================================================================ */
+html { font-size: 62.5%; }
 body {
 	background: #f5f5f5;
-	font: 14px sans-serif;
+	font: 1.4em sans-serif;
 }
 header {
 	max-width: 1000px;
 	margin: 0 auto;
+	padding: 3rem 0;
 }
 header::after {
 	content: "";
@@ -16,56 +18,136 @@ header::after {
 	clear: both;
 }
 
-
+/* BRANDING ======================================== */
+header h1 { 
+	float: left; 
+	padding: 0.75rem 1.5rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #666666;
+	border: solid 0.25rem #444444;
+}
 
 /* NAV ======================================== */
-nav {
-	float: right;
-}
+nav { float: right; }
 nav li {
 	list-style-type: none;
+	position: relative;
 	float: left;
 }
-nav li a{
+nav li a {
 	display: block;
-	padding: 20px;
+	margin: 0.75rem 0.5rem;
+	padding: 0.25rem 1.5rem;
+	font-weight: 600;
+	color: #666666;
+}
+nav > ul > li:not(:first-of-type) > a {
+	border-left: solid 1px #dddddd;
+}
+nav a:hover {
+	color: #5774b5;
+}
+
+/* DROPDOWN MENU ======================================== */
+nav li:hover ul { display: block; }
+nav li ul {
+	display: none;
+	position: absolute; top: 100%; left: 0;
+	margin-left: 1rem;
+	padding: 1rem 0;
+}
+nav ul ul li {
+	width: 100%;
+	border-left: none;
+	white-space: nowrap;
+}
+nav ul ul a {
+	margin: 0;
+	padding: 0.5rem 1rem;
+	font-weight: 400;
+	color: #aeaeae;
+}
+
+/* MY ACCOUNT ======================================== */
+a[href*=account] {
+	position: relative;
+	display: block;
+	margin: 0 0 0 2rem;
+	padding: 1rem 3rem 1rem 4.5rem;
+	background: #444444;
+	border-radius: 0.5rem;
+	color: #fafafa;
+}
+li:hover a[href*=account] { border-bottom-right-radius: 0; }
+a[href*=account]::before {
+	content: "";
+	position: absolute; left: -0.75rem; top: calc(50% - 2.5rem);
+	z-index: 1;
+	display: block;
+	width: 5rem;
+	height: 5rem;
+	background: #f5f5f5 url('images/user.png') no-repeat center 110%;
+	background-size: 3.5rem;
+	border: solid 0.5rem #444444;
+	border-radius: 50%;
+}
+a[href*=account]::after {
+	content: "";
+	position: absolute; right: 1rem; bottom: 40%;
+	z-index: 1;
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: solid 0.75rem transparent;
+	border-right: solid 0.75rem transparent;
+	border-top: solid 0.75rem rgba(245, 245, 245, 0.75);
+}
+
+/* MY ACCOUNT == CART VIEW ======================================== */
+nav li:hover a[href*=account] + table { display: block; }
+a[href*=account] + table {
+	display: none;
+	position: absolute; top: 100%; right: 0;
+	margin: 0;
+	padding: 2rem;
+	background: #444444;
+	border-collapse: collapse;
+	white-space: nowrap;
 	color: #999999;
 }
-.current a {
-	background: #fe8f01;
-	color: #ffffff;
+a[href*=account] + table tr:nth-of-type(even) { background: #4a4a4a; }
+a[href*=account] + table td { 
+	padding: 0.5rem 1rem;
+	vertical-align: middle;
+}
+a[href*=account] + table td:not(:last-of-type) { padding-right: 1rem; }
+a[href*=account] + table td:last-of-type {
+	text-align: right;
+	font-weight: 600;
+	color: #f5f5f5;
 }
 
-
-/* HEADER ======================================== */
-body > header { padding: 10px; }
-body > header img {
-	width: 150px;
-	height: 40px;
-	background: url('images/ramirez.jpg') no-repeat left center;
-	text-indent: -9999px;
-	float: left;
-}
-
-body > header dl { float: right; }
-body > header dt { display: none; }
-body > header dd { 
+a[href*=account] + table img {
 	display: inline-block;
-	padding: 10px 10px 10px 20px;
-	font-size: 80%;
+	width: 5rem;
+	height: 5rem;
+	background: #444444;
 }
-body > header dd:first-of-type { border-right: solid 1px #dedede; }
 
-#phone { 
-	padding-top: 20px;
-	background: url('images/phone.jpg') no-repeat left center; 
+a[href*=account] + table tr:last-of-type td { 
+	padding-top: 2rem; 
+	background: #444444;
 }
-#phone::before { 
-	content: "Phone:";
-	display: block;
+a[href*=account] + table a {
+	margin: 1rem 0 0 0;
+	padding: 1rem;
+	text-align: center;
+	background: #5774b5;
+	border-radius: 0.5rem;
+	color: #fff;
 }
-#location { background: url('images/location.jpg') no-repeat left center; }
-#location::before { 
-	content: "Location:";
-	display: block;
-}
+
+
+
+

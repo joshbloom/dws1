@@ -55,6 +55,7 @@ img {
 	height: 15rem;
 	border-radius: 50%;
 	background-color: #b0b0b0;
+	border: solid 0.5rem #dddddd;
 }
 
 

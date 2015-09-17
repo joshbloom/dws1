@@ -23,10 +23,18 @@ h2 {
 
 /* CTA ======================================== */
 section {
-	padding: 8em 2rem;
-	background-color: #606060;
+	position: relative;
+	padding: 15em 2rem;
+	background: #606060 url('images/bgSearch.jpg') no-repeat center;
+	background-size: cover;
 	text-align: center;
 }
+section::before {
+	content: "";
+	position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+	background: rgba(0, 0, 0, 0.8);
+}
+section * { position: relative; z-index: 1; }
 
 /* SEARCH ======================================== */
 form { 
