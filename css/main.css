@@ -4,7 +4,7 @@
 html { font-size: 62.5%; }
 body {
 	margin: 0;
-	background: #222222;
+	background: #252525;
 	font: 1.6em/1.4 sans-serif;
 	color: #999999;
 	font-weight: 100;
@@ -24,7 +24,7 @@ header::after, section::after, dl::after, footer::after {
 }
 body > section {
 	padding: 0 20px;
-	background: #262626;
+	background: #303030;
 }
 section {
 
@@ -36,7 +36,7 @@ h1 {
 	font-size: 40px;
 	font-weight: 900;
 	text-transform: uppercase;
-	color: #fafafa;
+	color: #ffffff;
 }
 h2 { 
 	margin: 0 0 10px 0;
@@ -99,8 +99,8 @@ article.featured { border: solid 10px #fabe0a; }
 article.featured::before {
 	content: "Featured";
 	display: block;
-	padding: 0.75rem;
-	position: absolute; top: 1.275rem; left: -5.25rem;
+	padding: 1rem 1.5rem;
+	position: absolute; top: 2.35rem; left: -8rem;
 	background: #fabe0a;
 	color: #ffffff;
 	text-transform: uppercase;
@@ -119,30 +119,51 @@ article img	{
 	border: solid 2px #eaeaea;
 }
 
+/* COMPONENT ACTIONS ============================== */
 .buttons li {
 	position: relative;
 	list-style-type: none;
 	display: inline-block;
 }
 .buttons a {
+	position: relative;
 	display: block;
 	padding: 1rem;
-	background-color: #cccccc;
+	background: #cccccc;
 	color: #fafafa;
 	text-transform: uppercase;
 	text-decoration: none;
 }
-.buttons a[href*=components] {
-	background-color: #fabe0a;
+.buttons li:hover a { background: #888888; }
+.buttons strong { 
+	font-weight: 900;
+	color: #fafafa;
 }
 
+.buttons a[href*=components] { background-color: #fabe0a; }
+.buttons a[href*=components]:hover { background-color: #e8b211; }
+
+
 /* DROP-DOWN ============================== */
+.buttons a:not([href]) { padding-right: 3.5rem; }
+.buttons a:not([href])::after {
+	content: "";
+	display: block;
+	position: absolute; top: calc(50% - 0.35rem); right: 1rem;
+	width: 0; height: 0;
+	border-left: solid 0.7rem transparent;
+	border-right: solid 0.7rem transparent;
+	border-top: solid 0.7rem #eeeeee;
+}
+
 .buttons li:hover ul { display: block; }
 .buttons li ul {
 	display: none;
-	position: absolute; top: 100%; left: 0;
+	position: absolute; top: calc(100% - 1rem); left: 0;
 	z-index: 1;
 	margin-left: 0;
+	padding: 1rem;
+	background-color: #888888;
 }
 .buttons ul li {
 	width: 100%;
@@ -153,6 +174,33 @@ article img	{
 	margin: 0;
 	padding: 0.5rem 1rem 0.5rem 4rem;
 	font-weight: 400;
-	background: #cccccc url('images/arrow165.png') no-repeat 1rem center;
-	background-size: 1.5rem;
+	text-transform: capitalize;
+	background: none;
+	color: #cccccc;
+	opacity: 0.5;
+}
+.buttons ul a:hover { opacity: 1; }
+.buttons ul a::before {
+	content: "";
+	position: absolute; top: 0.75rem; left: 1rem;
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: url('images/icons.png') no-repeat left top;
+	background-size: 3rem;
+	opacity: 0.75;
+}
+.buttons ul a:hover::before {
+	background: url('images/icons.png') no-repeat left bottom;
+	background-size: 3rem;
+}
+
+
+.buttons ul a[href*=youtube]::before {
+	background: url('images/icons.png') no-repeat right top;
+	background-size: 3rem;
+}
+.buttons ul a[href*=youtube]:hover::before {
+	background: url('images/icons.png') no-repeat right bottom;
+	background-size: 3rem;
 }
