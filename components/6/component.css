@@ -2,5 +2,62 @@
 ================================================================================
 COMPONENT STYLESHEET
 ================================================================================ */
+html { font-size: 62.5% }
+body {
+	background: #f5f5f5 url('images/pw_maze_white.png') repeat center;
+	font: 1.4em/1.6 sans-serif;
+	color: #b0b0b0;
+}
 
-/* COMMENT ======================================== */
+a { color: inherit; }
+
+footer {
+	width: 100%;
+	position: absolute; bottom: 0;
+	padding: 5rem;
+	text-align: center;
+	
+	background: rgba(0, 0, 0, 0.5);
+	/*
+	background: #cccccc url('images/map.jpg') no-repeat center;
+	background-size: cover;
+	*/
+	
+}
+footer::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* CONTACT INFO ======================================== */
+dt { display: none; }
+dd { display: block; }
+
+@media (min-width: 650px) {
+	dt, dd { display: inline-block; }
+	dt {
+		width: 2rem;
+		height: 2rem;
+		background: red;
+		margin: 0 1rem 0 4rem;
+		text-indent: -9999px;
+		opacity: 0.5;
+	}	
+	#email { background: url('images/envelope.png') no-repeat center center; background-size: 2rem; }
+	#address { background: url('images/pointer.png') no-repeat center center; background-size: 2rem; }
+	#phone { background: url('images/iphone.png') no-repeat center center; background-size: 2rem; }	
+}
+
+
+
+p { 
+	margin: 2rem;
+	clear: both; 
+	opacity: 0.5;
+}
+p a::before {
+	content: "|";
+	padding: 0 1rem;
+}

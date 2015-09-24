@@ -28,6 +28,22 @@ h2 {
 	font-weight: 900;
 	margin-bottom: 4rem;
 }
+h2::before, h2::after {
+	content: "";
+	display: block;
+	width: 5rem;
+	height: 0.1rem;
+	margin: 1rem auto;
+	background: #dfdfdf;
+}
+@media (min-width: 650px) {
+	h2::before, h2::after {
+		display: inline-block;
+		position: relative; top: -0.5rem;
+		margin: 0 2rem;
+	}
+}
+
 
 h3 {
 	margin: 2rem 0 1rem 0;
@@ -39,14 +55,58 @@ h3 {
 
 /* ARTICLE ======================================== */
 article {
-	padding: 1rem;
+	position: relative;
+	padding: 2rem 2rem 4rem 2rem;
+	border: solid 1px transparent;
+	border-radius: 25%;
 }
+article:hover::after { background: #5774b5; }
+article::after {
+	content: "";
+	display: block;
+	width: 5rem;
+	height: 0.1rem;
+	margin: 1rem auto 0 auto;
+	background: #cccccc;
+}
+
 @media (min-width: 650px) {
 	article {
 		width: calc(100% / 3);
 		float: left;
 	}
 }
+
+/* SOCIAL CONNECTIONS ======================================== */
+article:hover ul { display: block; }
+ul {
+	display: none;
+	position: absolute; top: 2.5rem; left: calc(50% - 7rem);
+	width: 14rem;
+	height: 14rem;
+	padding-top: 6rem;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.65);
+	border-radius: 50%;
+}
+li {
+	list-style-type: none;
+	display: inline-block;
+}
+li a {
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	background: #ccc;
+	text-indent: -9999px;
+	opacity: 0.5;
+}
+li a:hover { opacity: 1; }
+
+a[href*=facebook] { background: url('images/facebook.png') no-repeat center center; background-size: 3rem; }
+a[href*=twitter] { background: url('images/twitter.png') no-repeat center center; background-size: 3rem; }
+a[href*=linkedin] { background: url('images/linkedin.png') no-repeat center center; background-size: 3rem; }
+
 
 
 /* IMAGE ======================================== */

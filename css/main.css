@@ -11,24 +11,24 @@ body {
 }
 
 header, section, footer {
+	position: relative;
 	box-sizing: border-box;
 	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
 	
 }
+section, footer {
+	padding: 0 2rem;
+	background: #303030;
+}
 header::after, section::after, dl::after, footer::after {
 	content: "";
 	display: table;
 	clear: both;
 }
-body > section {
-	padding: 0 2rem;
-	background: #303030;
-}
-section {
 
-}
+
 
 h1 { 
 	margin: 0;
@@ -69,22 +69,65 @@ dt, dd {
 	float: left;
 }
 
+
+
+/* HOW MIGHT I BUILD THIS ============================== */
+ol {
+	margin-bottom: 3rem;
+	counter-reset: buildStep;
+}
+ol li { 
+	padding: 1rem;
+	list-style-type: none;
+}
+ol li:nth-of-type(even) { background: rgba(0, 0, 0, 0.04); }
+ol li::before {
+	counter-increment: buildStep;
+	content: counter(buildStep);
+	display: inline-block;
+	margin-right: 1rem;
+	padding: 0 0.5rem;
+	border-right: solid 1px rgba(0, 0, 0, 0.15);
+	color: rgba(0, 0, 0, 0.35);
+}
+code {
+	display: inline-block;
+	padding: 0 0.25rem;
+	border: solid 1px #cccccc;
+	border-radius: 3px;
+}
+
+
+
 /* HEADER ============================== */
 header img {
-	max-width: 100%;
+	max-width: calc(100% / 3);
 }
 
 /* ABOUT ============================== */
 #about {
-	padding: 50px;
+	padding: 0;
+	background: url(images/teamwork.jpg) no-repeat center;
+	background-size: cover;
+	border: solid 2rem #303030;
+	overflow: hidden;
+	text-align: right;
 }
-#about img {
-	display: block;
-	max-width: calc(100% / 3);
-	float: left;
-	margin-right: 3rem;
-	background: #444444;	
+#about h1 { 
+	color: rgba(0, 0, 0, 0.65);
+	padding-right: 3rem; 
+	font-weight: 900;
 }
+#about p {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	padding: 3rem;
+	padding-left: calc(100% / 3);
+	background: rgba(0, 0, 0, 0.65);
+}
+#about p + p { padding-top: 0; }
+
 
 /* COMPONENTS ============================== */
 article {
@@ -114,7 +157,7 @@ article img	{
 	display: block;
 	width: 100%;
 	min-height: 100px;
-	margin-bottom: 30rem;
+	margin-bottom: 3rem;
 	background: #cccccc;
 	border: solid 2px #eaeaea;
 }
@@ -125,7 +168,7 @@ article img	{
 	list-style-type: none;
 	display: inline-block;
 }
-.buttons a {
+.buttons a, .button {
 	position: relative;
 	display: block;
 	padding: 1rem;
@@ -134,7 +177,7 @@ article img	{
 	text-transform: uppercase;
 	text-decoration: none;
 }
-.buttons li:hover a { background: #888888; }
+.buttons li:hover a, .button:hover { background: #888888; }
 .buttons strong { 
 	font-weight: 900;
 	color: #fafafa;
@@ -174,7 +217,7 @@ article img	{
 	margin: 0;
 	padding: 0.5rem 1rem 0.5rem 4rem;
 	font-weight: 400;
-	text-transform: capitalize;
+	text-transform: none;
 	background: none;
 	color: #cccccc;
 	opacity: 0.5;
@@ -187,20 +230,40 @@ article img	{
 	width: 1.5rem;
 	height: 1.5rem;
 	background: url('images/icons.png') no-repeat left top;
-	background-size: 3rem;
+	background-size: 4.5rem 3rem;
 	opacity: 0.75;
 }
 .buttons ul a:hover::before {
 	background: url('images/icons.png') no-repeat left bottom;
-	background-size: 3rem;
+	background-size: 4.5rem 3rem;
 }
 
 
 .buttons ul a[href*=youtube]::before {
-	background: url('images/icons.png') no-repeat right top;
-	background-size: 3rem;
+	background: url('images/icons.png') no-repeat center top;
+	background-size: 4.5rem 3rem;
 }
 .buttons ul a[href*=youtube]:hover::before {
-	background: url('images/icons.png') no-repeat right bottom;
-	background-size: 3rem;
+	background: url('images/icons.png') no-repeat center bottom;
+	background-size: 4.5rem 3rem;
 }
+
+
+
+a[href*=WSP-projectTemplate] {
+	display: inline-block;
+	padding-left: 4rem;
+	background: #fabe0a;	
+}
+a[href*=WSP-projectTemplate]::before {
+	content: "";
+	position: absolute; top: 1.25rem; left: 1rem;
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: url('images/icons.png') no-repeat right top;
+	background-size: 4.5rem 3rem;
+	opacity: 0.75;
+}
+
+

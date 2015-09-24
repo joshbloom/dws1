@@ -14,13 +14,10 @@
 	
 	<!-- About -->	
 	<section id="about">
-		
-		<img src="images/teamwork.jpg" alt="" />
-		
-		<h1>Josh Bloom</h1>
+		<h1>Getting Started</h1>
 		<p>Growing up the future I saw for myself was quite different than the one I see today. Web design didn't exit. The structure of the world around me was exciting, I wanted to be an architect. Perhaps that dream came true. Focusing on structure now, it is simply the medium that has changed.</p>
 		
-		<p>Design is about communicating to the user. Development shouldn't be any different. My production process is constantly demanding I ask 'why?' Answering the question provides me the answer to another. How?</p>
+		<p><a class="button" target="_blank" href="https://github.com/joshbloom/WSP-projectTemplate">WSP-projectTemplate</a></p>
 		
 	</section>
 	
@@ -32,11 +29,18 @@
 			
 			<img src="components/1/component.gif" alt="" />
 				
-			<h2>Header</h2>
-			<p>Establishing the company brand is done through the placement of the logo within the top-left. Users are then able to access site content through a main navigation to the right, returning to the homepage by clicking on the logo itself. Existing users are also able to login via the right-most navigation item.</p>
-
+			<h2>Drop-down menu Header</h2>
+			<h3>What I want to practice/learn?</h3>
+			<p>Even the most simple of headers can have its own issues when deciding to float or inline-block the navigation. The addition of drop-down menu items always seems to complicate things even more. This component was selected in order to practice this technique. The ability to explore creating an eCommerce cart feature is a bonus.</p>
+			
 			<h3>How might I build this?</h3>			
-			<p>This <strong>component</strong> (header, section, or div) contains both the <strong>logo</strong> (img, h1) and the <strong>navigation</strong> (nav) with nested <strong>links</strong> (ul, li, a). In order for the logo to function as an escape hatch, it might also need to be linked (a). The last navigation link, perhaps an account <strong>login</strong> (form, alternately styled a).</p>
+			<ol>
+				<li>Create the <strong>component</strong> as a <code>&lt;header&gt;</code></li>
+				<li>Company branding established using <code>&lt;img&gt;</code> or <code>&lt;h1&gt;</code></li> 
+				<li><strong>Navigation</strong> <code>&lt;nav&gt;</code> containing a <code>&lt;ul&gt;</code> with four <code>&lt;li&gt;</code>, each containing an <code>&lt;a&gt;</code></li>
+				<li>Dropdown menu items will be nested <code>&lt;ul&gt;</code> inside of corresponding <code>&lt;li&gt;</code></li> 
+				<li>eCommerce cart view perhaps a <code>&lt;table&gt;</code> inside of last <code>&lt;li&gt;</code></li> 
+			</ol>
 
 			<ul class="buttons">
 				<li><a href="components/1/component.html" target="_blank">View Component</a></li>
@@ -46,9 +50,9 @@
 						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"><strong>MDN:</strong> HTML5 Header tag</a></li>
 						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"><strong>MDN:</strong> HTML5 Nav tag</a></li>
 						<li><a target="_blank" href="http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu"><strong>Line25:</strong> Pure CSS Dropdown Menu</a></li>
-						<li><a target="_blank" href="youtube">link 2</a></li>
+						<li><a target="_blank" href="youtube">Company Header</a></li>
 						<li><a target="_blank" href="https://css-tricks.com/snippets/css/css3-zebra-striping-a-table/"><strong>CSS Tricks:</strong> Zebra Striping</a></li>
-						<li><a target="_blank" href="youtube">link 2</a></li>						
+						<li><a target="_blank" href="youtube">Shopping Cart</a></li>						
 					</ul>	
 				</li>	
 			</ul>
@@ -60,21 +64,27 @@
 			<img src="components/2/component.gif" alt="" />
 				
 
-			<h2>CTA</h2>
-			<p>Just below the header, this Call-to-Action is used to capture the user's attention, focusing it on a specific action. In this case, conducting a search.</p>
+			<h2>Video Background CTA</h2>
+			<h3>What I want to practice/learn?</h3>
+			<p>Most CTAs (Call-to-Action) are pretty boring. A big background image with a title and link to read more. Adding video to the background seems much more enticing. Getting the text to overlap seems like it might be tricky. I would like to see how this is done. Helping to draw user focus to the searchbar.</p>
 
-			<h3>How might I build this?</h3>		
-			<p>This <strong>component</strong> (section, div), begins with a large <strong>heading</strong> (h1-h2) followed by a sub-heading tagline(h2-h5, p). Underneath is a <strong>search form</strong> (form). The form contains a <strong>text input</strong> (input), and a submit <strong>button</strong> (input, button).</p>
+			<h3>How might I build this?</h3>
+			<ol>
+				<li>Create the <strong>component</strong> as a <code>&lt;section&gt;</code></li>
+				<li>Main tagline using <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code></li> 
+				<li>Secondary tagline using <code>&lt;h2&gt;</code>,  <code>&lt;h3&gt;</code>, or <code>&lt;p&gt;</code></li>
+				<li>Search bar <code>&lt;form&gt;</code> containing <code>&lt;input&gt;</code> and <code>&lt;button&gt;</code></li> 
+			</ol>
 
 			<ul class="buttons">
 				<li><a href="components/2/component.html" target="_blank">View Component</a></li>
 				<li>
 					<a>Resources</a>
 					<ul>
+						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"><strong>MDN:</strong> HTML5 Section tag</a></li>
 						<li><a target="_blank" href="http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video"><strong>The New Code:</strong> Background Video</a></li>
 						<li><a target="_blank" href="http://www.w3.org/TR/html5/forms.html"><strong>W3C:</strong> Paragraphs in forms</a></li>
-						<li><a target="_blank" href="youtube">link 2</a></li>
-						<li><a target="_blank" href="youtube">link 2</a></li>						
+						<li><a target="_blank" href="youtube">Searh Bar</a></li>
 					</ul>	
 				</li>
 			</ul>
@@ -84,30 +94,33 @@
 		<article>
 			
 			<img src="components/3/component.gif" alt="" />
-			
-			<!--
-			https://dribbble.com/shots/1423171-Some-Analytics/attachments/208613
-			https://dribbble.com/shots/1027306-Levels
-			https://dribbble.com/shots/889914-IOS-7-app-design/attachments/96674
-			-->	
 
-			<h2>How It Works</h2>
-			<p>In order to convince users to download the advertised application it's important to demonstrate all the primary benefits of doing so. Here we are provided with three distinct features that showcase the inner workers of the web app: Realtime Stats, Set Goals, and Track Progress.</p>
+			<h2>Company Team Contact</h2>
+			<h3>What I want to practice/learn?</h3>
+			<p>Initially seeming to be a rather simply layout. When hovering over a team member however the user is presented with the social network links. This might be similar to the drop-down navigation but having it mask out and display on top of the image requires further exploration.</p>
 
 			<h3>How might I build this?</h3>
-			<p>This <strong>component</strong> (section, div), begins with a <strong>heading</strong> (h1, h2). Beneath this users are presented with information about <strong>3 main features</strong> (articles, sections, list items, div). Inside of each feature element users are provided with a <strong>title</strong> (h2, h3), and a <strong>description</strong> (p).</p> 
-
-			<p>* The <strong>images</strong> I'm not sure about... they would either be images tags (img) before the title or background-images applied to the appropriate feature.</p>
+			<ol>
+				<li>Create the <strong>component</strong> as a <code>&lt;section&gt;</code></li>
+				<li>Section title using <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code></li> 
+				<li>Identify team members as either a <code>&lt;ul&gt;</code> or three <code>&lt;article&gt;</code></li> 
+				<li>Show what they look like using an <code>&lt;image&gt;</code></li>
+				<li>Member name as <code>&lt;h2&gt;</code>or <code>&lt;h3&gt;</code></li>
+				<li>Description <code>&lt;p&gt;</code></li>
+				<li>Social links <code>&lt;ul&gt;</code> are initially hidden </li>
+			</ol>
 
 			<ul class="buttons">
-				<li><a href="components/3/component.html" target="_blank">View Component</a></li>
+				<li><a href="components/3/component.html" target="_blank">View Component</a>
+				</li>
 				<li>
 					<a>Resources</a>
 					<ul>
-						<li><a target="_blank" href="">External link</a></li>
-						<li><a target="_blank" href="">External link</a></li>
-						<li><a target="_blank" href="youtube">Instructor Video Tutorial</a></li>
-						<li><a target="_blank" href="youtube">Instructor Video Tutorial</a></li>						
+						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article"><strong>MDN:</strong> HTML5 Article Tag</a></li>
+						<li><a target="_blank" href="https://css-tricks.com/almanac/selectors/a/after-and-before/"><strong>CSS Tricks:</strong> ::after / ::before</a></li>
+						<li><a target="_blank" href="youtube">Team Members</a></li>
+						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors"><strong>MDN:</strong> Attribute Selectors</a></li>
+						<li><a target="_blank" href="youtube">Social Media Links</a></li>						
 					</ul>	
 				</li>
 			</ul>
@@ -118,14 +131,19 @@
 			
 			<img src="components/4/component.gif" alt="" />
 				
+			<h2>Responsive Features List</h2>
+			<h3>What I want to practice/learn?</h3>
+			<p>Playing around with media queries has enabled me to see how responsive development works. It seems like every website has to be responsive nowadays. I'd like to continue practicing this by working with additional data. This should allow me to get multiple breakpoints within a 'mobile-first' layout.</p>
 
-			<h2>Features</h2>
-			<p>Convincing users to buy into any product or service requires the ability to sell them on the many benefits of doing so. This layout accomplishes this task by providing a grid of six distinct features, each establishing a specific impact that the product/service would have on their day-to-day lives.</p>
-
-			<h3>How might I build this?</h3>		
-			<p>This <strong>component</strong> (section, div), begins with a <strong>heading</strong> (h1, h2). Beneath this users are presented with information about <strong>6 features</strong> (articles, sections, list items). Inside of each feature element users are provided with a <strong>title</strong> (h2, h3), and a <strong>description</strong> (p).</p> 
-
-			<p>* The <strong>images</strong> I'm not sure about... they would either be images tags (img) before the title or background-images applied to the appropriate feature.</p>
+			<h3>How might I build this?</h3>	
+			<ol>
+				<li>Create the <strong>component</strong> as a <code>&lt;section&gt;</code></li>
+				<li>Section title using <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code></li> 
+				<li>Features are <code>&lt;ul&gt;</code> or six <code>&lt;article&gt;</code></li> 
+				<li>The icon might not be content... use CSS background-image</li>
+				<li>Title <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code></li>
+				<li>Description <code>&lt;p&gt;</code></li>
+			</ol>
 
 			<h3>Style Guide</h3>
 			<dl>
@@ -141,10 +159,10 @@
 				<li>
 					<a>Resources</a>
 					<ul>
-						<li><a target="_blank" href="">External link</a></li>
-						<li><a target="_blank" href="">External link</a></li>
-						<li><a target="_blank" href="youtube">Instructor Video Tutorial</a></li>
-						<li><a target="_blank" href="youtube">Instructor Video Tutorial</a></li>						
+						<li><a target="_blank" href=""><strong></strong> Background vs Content</a></li>
+						<li><a target="_blank" href="youtube">Content</a></li>
+						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"><string>MDN:</string> Media Queries</a></li>
+						<li><a target="_blank" href="youtube">Responsive Grid</a></li>						
 					</ul>	
 				</li>	
 			</ul>
@@ -156,21 +174,31 @@
 			<img src="components/5/component.gif" alt="" />
 				
 
-			<h2>Testimonials</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non tellus non metus aliquet bibendum. Maecenas rhoncus, lorem at rutrum fringilla, elit leo lobortis sem, at vestibulum turpis turpis in massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+			<h2>Testimonial Pagination</h2>
+			<h3>What I want to practice/learn?</h3>
+			<p>Cycling between content is done all the time within an image carousel. Applying this technique to more robust content could easily save lots of room on the page. Developing this component should allow me to practice both CSS and Javascript techniques. Using images as pagination just seems really interesting. Breaking from the norm.</p>
 
 			<h3>How might I build this?</h3>			
-			<p>Donec finibus vitae urna a interdum. Suspendisse placerat nibh efficitur, malesuada eros eu, sagittis arcu. Fusce nec dui vitae magna varius commodo sed eu turpis. Donec quis nisi tincidunt, laoreet quam sit amet, luctus neque. Etiam interdum, libero non pharetra iaculis, eros eros luctus erat, at gravida felis leo in tortor. Vivamus eget nibh volutpat enim scelerisque semper non non mi. Quisque gravida et neque eget iaculis.</p>
+			<ol>
+				<li>Create the <strong>component</strong> as a <code>&lt;section&gt;</code></li>
+				<li>Section title using <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code></li> 
+				<li>Testimonials as three <code>&lt;article&gt;</code></li>
+				<li>Quote <code>&lt;blockquote&gt;</code> containing a <code>&lt;p&gt;</code></li>
+				<li>Details establishing both name <code>&lt;h3&gt;</code> and location <code>&lt;p&gt;</code></li>
+				<li>Pagination created via <code>&lt;ul&gt;</code> containing three <code>&lt;li&gt;</code></li>
+				<li>Each pagination li showcasing the author <code>&lt;image&gt;</code></li>
+			</ol>
 
 			<ul class="buttons">
 				<li><a href="components/5/component.html" target="_blank">View Component</a></li>
 				<li>
 					<a>Resources</a>
 					<ul>
-						<li><a target="_blank" href="">External link</a></li>
-						<li><a target="_blank" href="">External link</a></li>
-						<li><a target="_blank" href="youtube">Instructor Video Tutorial</a></li>
-						<li><a target="_blank" href="youtube">Instructor Video Tutorial</a></li>						
+						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"><strong>MDN:</strong> HTML blockquote tag</a></li>
+						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter"><strong>MDN:</strong> CSS filter property</a></li>
+						<li><a target="_blank" href="https://css-tricks.com/on-target/"><strong>CSS Tricks:</strong> On :target</a></li>
+						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations"><strong>MDN:</strong> CSS animation</a></li>
+						<li><a target="_blank" href="youtube">CSS-only slider</a></li>						
 					</ul>	
 				</li>
 			</ul>
@@ -182,21 +210,26 @@
 			<img src="components/6/component.gif" alt="" />
 				
 
-			<h2>Footer</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce non tellus non metus aliquet bibendum. Maecenas rhoncus, lorem at rutrum fringilla, elit leo lobortis sem, at vestibulum turpis turpis in massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+			<h2>Sticky Footer</h2>
+			<h3>What I want to practice/learn?</h3>
+			<p>Offering the user access to contact information almost immediately, a 'sticky-footer' can be a great tool. The fact that it's placed on top of other content makes me believe that it uses CSS positioning. I know I've struggled with that before. The extra practice would be helpful moving forward.</p>
 
 			<h3>How might I build this?</h3>		
-			<p>Donec finibus vitae urna a interdum. Suspendisse placerat nibh efficitur, malesuada eros eu, sagittis arcu. Fusce nec dui vitae magna varius commodo sed eu turpis. Donec quis nisi tincidunt, laoreet quam sit amet, luctus neque. Etiam interdum, libero non pharetra iaculis, eros eros luctus erat, at gravida felis leo in tortor. Vivamus eget nibh volutpat enim scelerisque semper non non mi. Quisque gravida et neque eget iaculis.</p>
+			<ol>
+				<li>Create the <strong>component</strong> as a <code>&lt;footer&gt;</code></li>
+				<li>Contact information using <code>&lt;dl&gt;</code> with three pairs of <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code></li> 
+				<li>Copyright <code>&lt;p&gt;</code> containing a privacy policy <code>&lt;a&gt;</code></li>
+			</ol>
 
 			<ul class="buttons">
 				<li><a href="components/6/component.html" target="_blank">View Component</a></li>
 				<li>
 					<a>Resources</a>
 					<ul>
-						<li><a target="_blank" href="">External link</a></li>
-						<li><a target="_blank" href="">External link</a></li>
-						<li><a target="_blank" href="youtube">Instructor Video Tutorial</a></li>
-						<li><a target="_blank" href="youtube">Instructor Video Tutorial</a></li>						
+						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"><strong>MDN:</strong> HTML5 dl Tag</a></li>
+						<li><a target="_blank" href="http://subtlepatterns.com/">Subtle Patterns</a></li>
+						<li><a target="_blank" href="youtube">Contact Info</a></li>
+						<li><a target="_blank" href="youtube">Presentation Seperators</a></li>						
 					</ul>	
 				</li>
 			</ul>
@@ -205,6 +238,12 @@
 
 						
 	</section>
+
+	<footer>
+		
+		<p>icons <a href="">designed by Freepik</a></p>
+		
+	</footer>
 
 </body>
 </html>
