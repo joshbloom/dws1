@@ -1,0 +1,29 @@
+/* 
+==========================================================================
+COMPONENT STYLESHEET
+========================================================================== */
+html { font-size: 62.5%; }
+body {
+	font: 1.4em/1.4 Helvetica, sans-serif;
+	color: #555555;
+}
+h1, h2 { text-align: center; }
+h1 { 
+	font-size: 3rem; 
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-bottom: 5rem;
+	letter-spacing: 0.15em;
+}
+h2 { 
+	font-size: 1.6rem; 
+	margin-bottom: 1rem;
+	color: #cccccc;
+}
+
+
+/* CONTACT SECTION ======================================== */
+
+
+/* FOOTER ======================================== */
+
