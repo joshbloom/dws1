@@ -156,7 +156,6 @@ article.featured::before {
 article img	{
 	display: block;
 	width: 100%;
-	min-height: 100px;
 	margin-bottom: 3rem;
 	background: #cccccc;
 	border: solid 2px #eaeaea;
