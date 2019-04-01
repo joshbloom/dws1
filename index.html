@@ -1,282 +1,306 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>WSP: Josh Bloom</title>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>DWS1: Designing For Web Standards</title>
+	
 	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:300,500,900" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	
 </head>
 <body>
-
-	<!-- Header -->
-	<header>
-		<img src="images/WSPlogo.png" alt="WSP: Web Standards Project">
-	</header>
 	
-	<!-- About -->	
-	<section id="about">
-		<h1>Getting Started</h1>
-		<p>Let us first practice our existing HTML &amp; CSS skills by building out a simple one-page website for the purpose of sharing our progress throughout the month. Creating a custom design you can think of this a your own portfolio. Start off by downloading or cloning the WSP-projectTemplate repository, in which a folder structure has already been created for you. There is even a CSS reset which you are free to utilize. </p>
+	<header>
+		<h1>Designing for Web Standards</h1>	
+	</header>
+
+	<section id="projects">
+		<header>
+			<h2>Project Designs</h2>
+		</header>
 		
-		<p><a class="button" target="_blank" href="https://github.com/joshbloom/WSP-projectTemplate">WSP-projectTemplate</a></p>
+		<div class="wrapper">
+		<article>
+			<p class="thumbnail"><img src="projects/HikersGuide/design/HikersGuide.jpg" alt="Hiker Blog website template"></p>
+			<h3>Hiker Guide</h3>
+			<p>Blog site for the outdoor adventurer. Includes blog, destination, and events.</p>
+			<p><a href="projects/HikersGuide.zip">Download</a></p>
+		</article>
+		
+		<article>
+			<p class="thumbnail"><img src="projects/BikeShop/design/BikeShop.jpg" alt="Bike Shop website template"></p>
+			<h3>Cycle World</h3>
+			<p>eCommerce site for a bike shop. Includes products, events, and member blog.</p>
+			<p><a href="projects/BikeShop.zip">Download</a></p>
+		</article>
+		
+		<article>
+			<p class="thumbnail"><img src="projects/RockBand/design/RockBand.jpg" alt="Rock Band website template"></p>
+			<h3>Rock Band</h3>
+			<p>Marketing site for rock n' roll band. Site includes blog, events, and band info.</p>
+			<p><a href="projects/RockBand.zip">Download</a></p>
+		</article>
+		</div>
 		
 	</section>
-	
-	<!-- Blog, Components -->
-	<section>
-		<h1>Component Library</h1>
 
-		<article>
-			
-			<img src="components/1/header.jpg" alt="Website Header/Navigation Component" />	
-			<h2>Drop-down menu Header</h2>
-			
-			<h3>What I hope to practice/learn?</h3>
-			<p>Even the most simple of headers can have its own issues when deciding to float or inline-block the navigation. The addition of drop-down menu items always seems to complicate things even more. This component was selected in order to practice this technique. The ability to explore creating an eCommerce cart feature is a bonus.</p>
-			
-			<h3>How this relates to what I have/will learn in WDD.</h3>
-			<p>The main benefit of a drop-down menu is the ability to provide the user with expedited access to more specific content. This sense of user focused design re-inforces the concepts discussed in many of the previous design classes. While I will initially develop this statically, the eCommerce nature enables me to consider future development. Dynamically generated content from a database and refreshing cart items using Javascript.</p>
-
-			<h3>How might I build this?</h3>			
-			<ol>
-				<li>Create the <strong>component</strong> as a <code>&lt;header&gt;</code></li>
-				<li>Company branding established using <code>&lt;img&gt;</code> or <code>&lt;h1&gt;</code></li> 
-				<li><strong>Navigation</strong> <code>&lt;nav&gt;</code> containing a <code>&lt;ul&gt;</code> with four <code>&lt;li&gt;</code>, each containing an <code>&lt;a&gt;</code></li>
-				<li>Dropdown menu items will be nested <code>&lt;ul&gt;</code> inside of corresponding <code>&lt;li&gt;</code></li> 
-				<li>eCommerce cart view perhaps a <code>&lt;table&gt;</code> inside of last <code>&lt;li&gt;</code></li> 
-			</ol>
+	<section id="lessons">
+		<header>
+			<h2>Development Process</h2>
+		</header>
 		
-			<ul class="buttons">
-				<li><a href="components/1/component.html" target="_blank">View Component</a></li>
-				<li>
-					<a>Resources</a>
-					<ul>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header"><strong>MDN:</strong> HTML5 Header tag</a></li>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav"><strong>MDN:</strong> HTML5 Nav tag</a></li>
-						<li><a target="_blank" href="http://line25.com/tutorials/how-to-create-a-pure-css-dropdown-menu"><strong>Line25:</strong> Pure CSS Dropdown Menu</a></li>
-						
-						<li><a target="_blank" href="https://www.youtube.com/watch?v=DZ7c3FE1_3o">Explore Float vs. Inline-Block</a></li>
-						<li><a target="_blank" href="https://css-tricks.com/snippets/css/clear-fix/"><strong>CSS Tricks:</strong> Clearfix</a></li>
-						
-						
-						<li><a target="_blank" href="https://css-tricks.com/snippets/css/css-triangle/"><strong>CSS Tricks:</strong> CSS Triangles</a></li>
-						<li><a target="_blank" href="https://css-tricks.com/snippets/css/css3-zebra-striping-a-table/"><strong>CSS Tricks:</strong> Zebra Striping</a></li>					
-					</ul>	
-				</li>	
-				<li><a href="">Watch Me Build It (Comming Soon)</a>
-					<ul>
-						<li><a href="">HTML: Logo</a></li>
-						<li><a href="">HTML: Navigation</a></li>
-						<li><a href="">HTML: Shopping Cart</a></li>
-						<li><a href="">CSS: Basic Structure</a></li>
-						<li><a href="">CSS: Dropdown Navigation</a></li>
-						<li><a href="">CSS: Cart</a></li>
-					</ul>
-				</li>
-			</ul>
-			
-		</article>
-
-		<article>
-			
-			<img src="components/2/video.jpg" alt="Video CTA Component" />
+		<ol>
+			<li>
+				<h3>Setup</h3>
+				<p>An organized environment is key to a successful project. Before you begin coding ( <a href="https://chriswharton.me/2016/05/html-css-and-js-frameworks-use/" target="_blank">Learning the Basics</a> ), you will prepare by setting up a remote repository ( <a href="https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control">Version Control</a> ) and gathering design inspiration.</p>
 				
+				<ul>
+					<li>Resources
+						<ul>
+							<li><a href="https://bitbucket.org" target="_blank">Bitbucket</a></li>
+							<li><a href="http://www.templatemonster.com/" target="_blank">Template Monster</a></li>
+						</ul>
+					</li>
+					<li>Demos
+						<ul>
+							<li><a href="https://www.youtube.com/watch?v=aMpAux1uXbI" target="_blank">Designer vs. Developer</a></li>
+							<li><a><strong>Designer</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=Ara0-eQnFkI" target="_blank">Choosing a Design</a></li>
+									<li><a href="https://www.youtube.com/watch?v=2XSngCBZtP0" target="_blank">Designing Secondary Pages</a></li>
+									<li><a href="https://www.youtube.com/watch?v=VQzf258-znA" target="_blank">Design Alterations</a></li>
+								</ul>
+							</li>
+							<li><a href=""><strong>Developer</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=YgVZcDon270" target="_blank">Creating a Site Repo</a></li>
+									<li><a href="https://www.youtube.com/watch?v=ezdROC8ZUgY" target="_blank">HTML Template</a></li>
+								</ul>
+							</li>	
+						</ul>
+					</li>
+				</ul>
+				
+			</li>
+				
+			<li>
+				<h3>HTML</h3>
+				<p>Structuring your project will require semantic HTML ( <a href="http://adrianroselli.com/2014/01/the-html-star-is-ignored-and-shouldnt-be.html" target="_blank">HTML Rockstar</a> ). Ignore the presentation and think about what each tag communicates about the content within ( <a href="https://www.iandevlin.com/blog/2016/01/opinion/on-accessibility-and-the-lack-of-proper-html" target="_blank">Accessibility and the Lack of Proper HTML</a> ).</p>
+				
+				<ul>
+					<li>Resources
+						<ul>
+							<li><a href="https://www.youtube.com/watch?v=o0YjVjCIRCE" target="_blank">Avoiding Bad Resources</a></li>
+							<li><a href="https://www.w3.org/" target="_blank">World Wide Web Consortium (W3C)</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network</a></li>
+							<li><a href="http://html5doctor.com/downloads/h5d-sectioning-flowchart.pdf" target="_blank">HTML5 Element Flowchart</a></li>
+							<li><a href="https://validator.w3.org/" target="_blank">HTML Validation</a></li>
+						</ul>
+					</li>
+					<li>Demos
+						<ul>
+							<li><a href="" target="_blank">Page <strong>Deconstruction</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=C_y38zRUNJI" target="_blank">What is Divitis</a></li>
+									<li><a href="https://www.youtube.com/watch?v=rHZSWi9mwBY" target="_blank">HTML5 Elements</a></li>
+									<li><a href="https://www.youtube.com/watch?v=h1MzZTm4Uxg" target="_blank">Sectioning</a></li>
+									<li><a href="https://www.youtube.com/watch?v=HFoKSa9XF2Y" target="_blank">Do I need a wrapper?</a></li>
+								</ul>							
+							</li>
+							
+							<li><a><strong>Header</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=fkOENBSuFZU" target="_blank">Deconstruction</a></li>
+									<li><a href="https://www.youtube.com/watch?v=NiejMCpqtSA" target="_blank">Header</a></li>
+									<li><a href="https://www.youtube.com/watch?v=efkrc5OI0Zw" target="_blank">Logo</a></li>
+									<li><a href="https://www.youtube.com/watch?v=kEbb0sE2wZw" target="_blank">Navigation</a></li>
+									<li><a href="https://www.youtube.com/watch?v=mYHV9It901o" target="_blank">Preview</a></li>
+									
+								</ul>
+							</li>
+							<li><a><strong>Call to Action</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=wBw57GafO1g" target="_blank">Deconstruction</a></li>
+									<li><a href="https://www.youtube.com/watch?v=GTrNMq1UzHE" target="_blank">Deconstruction (Cont.)</a></li>
+									<li><a href="https://www.youtube.com/watch?v=51cblcBSj-Q" target="_blank">CTA Section</a></li>
+									<li><a href="https://www.youtube.com/watch?v=2GPRqvA6tgo" target="_blank">Article</a></li>
+									<li><a href="https://www.youtube.com/watch?v=xzO-2RnLs44" target="_blank">Copy</a></li>
+									<li><a href="https://www.youtube.com/watch?v=Lci5oSJn2g0" target="_blank">Pagination</a></li>
+									<li><a href="https://www.youtube.com/watch?v=cRwzxio5O6I" target="_blank">Form</a></li>
+									<li><a href="https://www.youtube.com/watch?v=rQecrdck_5I" target="_blank">Fieldsets</a></li>
+									<li><a href="https://www.youtube.com/watch?v=zB5DgyIMebo" target="_blank">Labels &amp; Inputs</a></li>
+									<li><a href="https://www.youtube.com/watch?v=mOLOdp4-oAs" target="_blank">Double-check your work</a></li>
+								</ul>							
+							</li>
+							<li><a><strong>Features</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=Rindr_qvOOw" target="_blank">Deconstruction</a></li>
+									<li><a href="https://www.youtube.com/watch?v=oTFm4-mMSLk" target="_blank">Strong &amp; Em</a></li>
+									<li><a href="https://www.youtube.com/watch?v=-xzKL4BV4MQ" target="_blank">Article vs. List</a></li>
+									<li><a href="https://www.youtube.com/watch?v=S7ujM4DzbUg" target="_blank">Copy</a></li>
+								</ul>							
+							</li>
+							<li><a><strong>Testimonials</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=yRxh0LilT3E" target="_blank">Deconstruction</a></li>
+									<li><a href="https://www.youtube.com/watch?v=EFH87Jmccsw" target="_blank">Blockquote</a></li>
+									<li><a href="https://www.youtube.com/watch?v=6H_PThhSoJ4" target="_blank">Pagination</a></li>
+								</ul>							
+							</li>
+							<li><a><strong>Plans</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=uKKv2wSPLT0" target="_blank">Deconstruction</a></li>
+									<li><a href="https://www.youtube.com/watch?v=BomAaFh2FW0" target="_blank">Section</a></li>
+									<li><a href="https://www.youtube.com/watch?v=G2eey1-ZWR0" target="_blank">Table</a></li>
+									<li><a href="https://www.youtube.com/watch?v=wHqFSR6KrRU" target="_blank">Table Copy</a></li>
+									<li><a href="https://www.youtube.com/watch?v=4pxeQRKskYE" target="_blank">Table Copy (Cont.)</a></li>
+								</ul>							
+							</li>
+							<li><a><strong>About</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=ZSZuXtdNmv4" target="_blank">Deconstruction</a></li>
+									<li><a href="https://www.youtube.com/watch?v=kQbV39XNHao" target="_blank">Sections</a></li>
+									<li><a href="https://www.youtube.com/watch?v=O3mlaKGgfNY" target="_blank">Copy</a></li>
+									<li><a href="https://www.youtube.com/watch?v=3LLPM0e_Feo" target="_blank">Description List</a></li>
+									<li><a href="https://www.youtube.com/watch?v=Ujsx6BvMsa8" target="_blank">Address</a></li>
+								</ul>							
+							</li>			
+							<li><a><strong>Footer</strong></a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=waL51jz3fCw" target="_blank">Deconstruction</a></li>
+									<li><a href="https://www.youtube.com/watch?v=_X5gyH_B5BY" target="_blank">Copyright</a></li>
+									<li><a href="https://www.youtube.com/watch?v=nJc-7DamuN4" target="_blank">Social Networks</a></li>
+								</ul>							
+							</li>							
+						</ul>
+					</li>
+				</ul>
+			</li>
 
-			<h2>Video Background CTA</h2>
-			<h3>What I want to practice/learn?</h3>
-			<p>Most CTAs (Call-to-Action) are pretty boring. A big background image with a title and link to read more. Adding video to the background seems much more enticing. Getting the text to overlap seems like it might be tricky. I would like to see how this is done. Helping to draw user focus to the searchbar.</p>
+			<li>
+				<h3>JSON Data</h3>
+				<p>In most cases web content is not static. You will be required to parse through data, replacing the placeholder copy, displaying the most appropriate content to the viewer.</p>
 
-			<h3>How this relates to what I have/will learn in WDD.</h3>
-			<p>...</p>
+				<ul>
+					<li>Resources
+						<ul>
+							<li><a href="http://jshint.com/" target="_blank">JS Validation</a></li>
+						</ul>
+					</li>
+					<li>Demos
+						<ul>
+							<li><a href="https://www.youtube.com/watch?v=NvmmR8M55YQ" target="_blank">Data</a></li>
+							<li><a href="https://www.youtube.com/watch?v=kajeooBaF58" target="_blank">Option 1: InnerHTML</a></li>
+							<li><a href="https://www.youtube.com/watch?v=su5iSlVMh1k" target="_blank">Option 2: InsertAdjacentHTML</a></li>
+							<li><a href="https://www.youtube.com/watch?v=F78bkYZWQSo" target="_blank">Conditionals</a></li>
+						</ul>
+					</li>
+				</ul>			
+			</li>
 
-			<h3>How might I build this?</h3>
-			<ol>
-				<li>Create the <strong>component</strong> as a <code>&lt;section&gt;</code></li>
-				<li>Main tagline using <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code></li> 
-				<li>Secondary tagline using <code>&lt;h2&gt;</code>,  <code>&lt;h3&gt;</code>, or <code>&lt;p&gt;</code></li>
-				<li>Search bar <code>&lt;form&gt;</code> containing <code>&lt;input&gt;</code> and <code>&lt;button&gt;</code></li> 
-			</ol>
-
-			<ul class="buttons">
-				<li><a href="components/2/component.html" target="_blank">View Component</a></li>
-				<li>
-					<a>Resources</a>
-					<ul>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section"><strong>MDN:</strong> HTML5 Section tag</a></li>
-						<li><a target="_blank" href="https://www.youtube.com/watch?v=og9jtPpX78o">Explore Positioning</a></li>
-						<li><a target="_blank" href="http://thenewcode.com/777/Create-Fullscreen-HTML5-Page-Background-Video"><strong>The New Code:</strong> Background Video</a></li>
-						<li><a target="_blank" href="http://www.w3.org/TR/html5/forms.html"><strong>W3C:</strong> Paragraphs in forms</a></li>
-					</ul>	
-				</li>
-			</ul>
+			<li>
+				<h3>CSS</h3>
+				<p>With the content in place you can now focus on presentation ( <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" target="_blank">CSS</a> ). Think creatively, using appropriate CSS Selectors ( <a href="http://www.zeldman.com/2012/11/21/in-defense-of-descendant-selectors-and-id-elements/" target="_blank">In Defense of ... Selectors</a> ), being careful not to break the semantic nature of your HTML.</p>
+				
+				<ul>
+					<li>Resources
+						<ul>
+							<li><a href="https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048" target="_blank">CSS Selectors</a></li>
+							<li><a href="https://developer.mozilla.org/en-US/" target="_blank">Mozilla Developer Network</a></li>
+							<li><a href="https://jigsaw.w3.org/css-validator/" target="_blank">CSS Validation</a></li>
+						</ul>
+					</li>
+					<li>Demos
+						<ul>
+							<li><a>Default Structure &amp; Typography</a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=K3r75kcGg9E" target="_blank">Reset vs. Normalizer</a></li>
+									<li><a href="https://www.youtube.com/watch?v=qMI6Nc3-jzs" target="_blank">Using Rems</a></li>
+									<li><a href="https://www.youtube.com/watch?v=d9i2FZkee6g" target="_blank">Body Copy</a></li>
+									<li><a href="https://www.youtube.com/watch?v=3t8MtbAatpU" target="_blank">Sectioning</a></li>
+									<li><a href="https://www.youtube.com/watch?v=g2ArxNIinlA" target="_blank">Alternate Sections</a></li>
+									<li><a href="https://www.youtube.com/watch?v=z5M0UlBvpiA" target="_blank">Constrain Content</a></li>
+									<li><a href="https://www.youtube.com/watch?v=sR2vcNCOAVI" target="_blank">Headings</a></li>
+									<li><a href="https://www.youtube.com/watch?v=tpXC48-nLyw" target="_blank">Strong &amp; Em</a></li>
+								</ul>
+							</li>
+							<li><a>Section: Features</a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=XiZKEUrfA9Y" target="_blank">Text Align</a></li>
+									<li><a href="https://www.youtube.com/watch?v=RBbyIJmCTco" target="_blank">Calc Function</a></li>
+									<li><a href="https://www.youtube.com/watch?v=g1_nBWwrnZo" target="_blank">Floating</a></li>
+									<li><a href="https://www.youtube.com/watch?v=vZB5dF362nA" target="_blank">Clearfix</a></li>
+								</ul>
+							</li>
+							
+							
+							<!--
+							<li><a>Header</a></li>
+							<li><a>Call to Action</a></li>
+							<li><a>Features</a></li>
+							<li><a>Testimonials</a></li>
+							<li><a>Plans</a></li>
+							<li><a>About</a></li>
+							<li><a>Footer</a></li>
+							-->
+							
+							<li><a>Archived Videos</a>
+								<ul>
+									<li><a href="https://www.youtube.com/watch?v=S4oUtps-ZnE" target="_blank">Font Sizing</a></li>
+									<li><a href="https://www.youtube.com/watch?v=BM83b0qefwI" target="_blank">Coloring</a></li>
+									<li><a href="https://www.youtube.com/watch?v=btIhyPRp7bw" target="_blank">Structure</a></li>
+									<li><a href="https://www.youtube.com/watch?v=lZfI-fbXlEc" target="_blank">Logo</a></li>
+									<li><a href="https://www.youtube.com/watch?v=08WR2obmjWg" target="_blank">Navigation</a></li>
+									<li><a href="https://www.youtube.com/watch?v=H3oxRh9B4mk" target="_blank">Nav Dropdown</a></li>
+									<li><a href="https://www.youtube.com/watch?v=5TW206Kz-zg" target="_blank">Heading</a></li>
+									<li><a href="https://www.youtube.com/watch?v=4KCzR3LhvrY" target="_blank">Grid Layout</a></li>
+									<li><a href="https://www.youtube.com/watch?v=k8CeB-A8NpY" target="_blank">Icons</a></li>
+									<li><a href="https://www.youtube.com/watch?v=SVXAscRiTkY" target="_blank">Wrapper</a></li>
+									<li><a href="https://www.youtube.com/watch?v=HwFiKdIIMjA" target="_blank">Copyright</a></li>
+									<li><a href="https://www.youtube.com/watch?v=D8gkutJFrNU" target="_blank">Social Networks</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
 			
-		</article>
+			<li>
+				<h3>JS Events</h3>
+				<p>There are some things that just aren't possible with CSS. Adding additional interaction can be done through the use of event handlers. Here you will continue to expand on your JavaScript skills.</p>
+				
+				<ul>
+					<li>Resources
+						<ul>
+							<li><a href="http://eloquentjavascript.net/14_event.html" target="_blank">Event Handlers</a></li>
+						</ul>
+					</li>
+					<li>Demos
+						<!--
+						<ul>
+							<li><a href="" target="_blank">Forms</a></li>
+							<li><a href="" target="_blank">Sliders</a></li>
+						</ul>
+						-->
+					</li>
+				</ul>
+			</li>
+		</ol>
 		
-		<article>
-			
-			<img src="components/3/team.jpg" alt="Team Contact Component" />
-
-			<h2>Company Team Contact</h2>
-			<h3>What I want to practice/learn?</h3>
-			<p>Initially seeming to be a rather simply layout. When hovering over a team member however the user is presented with the social network links. This might be similar to the drop-down navigation but having it mask out and display on top of the image requires further exploration.</p>
-
-			<h3>How this relates to what I have/will learn in WDD.</h3>
-			<p>...</p>
-
-			<h3>How might I build this?</h3>
-			<ol>
-				<li>Create the <strong>component</strong> as a <code>&lt;section&gt;</code></li>
-				<li>Section title using <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code></li> 
-				<li>Identify team members as either a <code>&lt;ul&gt;</code> or three <code>&lt;article&gt;</code></li> 
-				<li>Show what they look like using an <code>&lt;image&gt;</code></li>
-				<li>Member name as <code>&lt;h2&gt;</code>or <code>&lt;h3&gt;</code></li>
-				<li>Description <code>&lt;p&gt;</code></li>
-				<li>Social links <code>&lt;ul&gt;</code> are initially hidden </li>
-			</ol>
-
-			<ul class="buttons">
-				<li><a href="components/3/component.html" target="_blank">View Component</a>
-				</li>
-				<li>
-					<a>Resources</a>
-					<ul>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article"><strong>MDN:</strong> HTML5 Article Tag</a></li>
-						<li><a target="_blank" href="https://www.youtube.com/watch?v=F8e3swgO39E">Explore Creating an Overlay</a></li>
-						<li><a target="_blank" href="https://css-tricks.com/almanac/selectors/a/after-and-before/"><strong>CSS Tricks:</strong> ::after / ::before</a></li>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors"><strong>MDN:</strong> Attribute Selectors</a></li>				
-					</ul>	
-				</li>
-			</ul>
-			
-		</article>
-
-		<article class="featured">
-			
-			<img src="components/4/component.gif" alt="" />	
-			<h2>Responsive Features List</h2>
-			
-			<h3>What I hope to practice/learn?</h3>
-			<p>Playing around with media queries has enabled me to see how responsive development works. It seems like every website has to be responsive nowadays. I'd like to continue practicing this by working with additional data. This should allow me to get multiple breakpoints within a 'mobile-first' layout.</p>
-
-			<h3>How this relates to what I have/will learn in WDD.</h3>
-			<p>The concept of 'mobile-first' has been previously discussed in class. From a design point-of-view it allows us to focus on the most important content. We discussed grid layouts and how making it responsive enables the best use of space across all mediums. In future classes I can see this being updated as dynamically generated content.</p>
-
-			<h3>How might I build this?</h3>	
-			<ol>
-				<li>Create the <strong>component</strong> as a <code>&lt;section&gt;</code></li>
-				<li>Section title using <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code></li> 
-				<li>Features are <code>&lt;ul&gt;</code> or six <code>&lt;article&gt;</code></li> 
-				<li>The icon might not be content... use CSS background-image</li>
-				<li>Title <code>&lt;h2&gt;</code> or <code>&lt;h3&gt;</code></li>
-				<li>Description <code>&lt;p&gt;</code></li>
-			</ol>
-
-			<h3>Style Guide</h3>
-			<dl>
-				<dt>Colors:</dt>
-				<dd>#FFFFFF, #F6F6F6, #B0B0B0</dd>
-				<dt>Fonts:</dt>
-				<dd>Helvetica, sans-serif</dd>
-			</dl>
-
-			<ul class="buttons">
-				<li><a href="components/4/component.html" target="_blank">View Component</a></li>
-				<li>
-					<a>Resources</a>
-					<ul>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius"><strong>MDN:</strong> Border Radius</a></li>
-						<li><a target="_blank" href="">Explore Background vs Content (Coming Soon)</a></li>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/calc"><strong>MDN:</strong> CSS Calc</a></li>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries"><strong>MDN:</strong> Media Queries</a></li>
-						
-						<li><a target="_blank" href="http://www.flaticon.com/">Flaticon</a></li>
-						<li><a target="_blank" href="https://www.myfonts.com/WhatTheFont/">What the Font!</a></li>
-					</ul>	
-				</li>	
-			</ul>
-			
-		</article>
-
-		<article>
-			
-			<img src="components/5/testimonials.jpg" alt="Customer Testimonail Component" />
-				
-
-			<h2>Testimonial Pagination</h2>
-			<h3>What I want to practice/learn?</h3>
-			<p>Cycling between content is done all the time within an image carousel. Applying this technique to more robust content could easily save lots of room on the page. Developing this component should allow me to practice both CSS and Javascript techniques. Using images as pagination just seems really interesting. Breaking from the norm.</p>
-
-			<h3>How this relates to what I have/will learn in WDD.</h3>
-			<p>...</p>
-
-			<h3>How might I build this?</h3>			
-			<ol>
-				<li>Create the <strong>component</strong> as a <code>&lt;section&gt;</code></li>
-				<li>Section title using <code>&lt;h1&gt;</code> or <code>&lt;h2&gt;</code></li> 
-				<li>Testimonials as three <code>&lt;article&gt;</code></li>
-				<li>Quote <code>&lt;blockquote&gt;</code> containing a <code>&lt;p&gt;</code></li>
-				<li>Details establishing both name <code>&lt;h3&gt;</code> and location <code>&lt;p&gt;</code></li>
-				<li>Pagination created via <code>&lt;ul&gt;</code> containing three <code>&lt;li&gt;</code></li>
-				<li>Each pagination li showcasing the author <code>&lt;image&gt;</code></li>
-			</ol>
-
-			<ul class="buttons">
-				<li><a href="components/5/component.html" target="_blank">View Component</a></li>
-				<li>
-					<a>Resources</a>
-					<ul>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote"><strong>MDN:</strong> HTML blockquote tag</a></li>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter"><strong>MDN:</strong> CSS filter property</a></li>
-						<li><a target="_blank" href="https://css-tricks.com/on-target/"><strong>CSS Tricks:</strong> On :target</a></li>
-						<li><a target="_blank" href="">Explore CSS Animation (Coming Soon)</a></li>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations/Using_CSS_animations"><strong>MDN:</strong> CSS animation</a></li>
-					</ul>	
-				</li>
-			</ul>
-			
-		</article>
-
-		<article>
-			
-			<img src="components/6/footer.jpg" alt="Sticky Footer Component" />
-				
-
-			<h2>Sticky Footer</h2>
-			<h3>What I want to practice/learn?</h3>
-			<p>Offering the user access to contact information almost immediately, a 'sticky-footer' can be a great tool. The fact that it's placed on top of other content makes me believe that it uses CSS positioning. I know I've struggled with that before. The extra practice would be helpful moving forward.</p>
-
-			<h3>How this relates to what I have/will learn in WDD.</h3>
-			<p>...</p>
-
-			<h3>How might I build this?</h3>		
-			<ol>
-				<li>Component is a <code>&lt;footer&gt;</code></li>
-				<li>List of contact information perhaps <code>&lt;ul&gt;</code> or <code>&lt;dl&gt;</code> with three pairs of <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code></li> 
-				<li>Icons may not be content, so I'm going to leave them off, adding with CSS</li>
-				<li>Copyright <code>&lt;p&gt;</code> containing a privacy policy <code>&lt;a&gt;</code></li>
-			</ol>
-
-			<ul class="buttons">
-				<li><a href="components/6/component.html" target="_blank">View Component</a></li>
-				<li>
-					<a>Resources</a>
-					<ul>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl"><strong>MDN:</strong> HTML5 dl Tag</a></li>
-						<li><a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Email_links"><strong>MDN:</strong> Email Links</a></li>
-						<li><a target="_blank" href="http://dev.w3.org/html5/html-author/charref"><strong>W3C:</strong> HTML Entities</a></li>
-						<li><a target="_blank" href="https://css-tricks.com/snippets/css/sticky-footer/"><strong>CSS Tricks:</strong> Sticky Footer</a></li>
-						<li><a target="_blank" href="http://subtlepatterns.com/">Subtle Patterns</a></li>						
-					</ul>	
-				</li>
-			</ul>
-			
-		</article>
-
-						
 	</section>
 
 	<footer>
-		<p>icons designed by Freepik at <a href="http://www.flaticon.com/">flaticon.com</a></p>
+		<p>DWS1 : Web Design &amp; Development : Fullsail University</p>
 	</footer>
+	
+	<!-- JavaScript -->
+	<script src="js/videos.js"></script>
 
 </body>
 </html>

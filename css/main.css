@@ -1,279 +1,689 @@
-/* Project CSS 
-============================================================
-============================================================*/
-html { font-size: 62.5%; }
-body {
-	margin: 0;
-	background: #252525;
-	font: 1.6em/1.4 sans-serif;
-	color: #999999;
-	font-weight: 100;
+/* SECTIONS
+==================================================================================================== 
+====================================================================================================
+*/
+section, .wrapper, footer {
+	position: relative;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.wrapper {
+	padding: 0 2rem;
 }
 
-header, section, footer {
-	position: relative;
-	box-sizing: border-box;
-	width: 100%;
-	max-width: 960px;
-	margin: 0 auto;
-	
-}
-section, footer {
-	padding: 0 2rem;
-	background: #303030;
-}
-header::after, section::after, dl::after, footer::after {
+/* CLEARFIX */
+#projects .wrapper::after,
+#lessons::after {
 	content: "";
-	display: table;
+	display: block;
 	clear: both;
 }
 
-
-
-h1 { 
-	margin: 0;
-	padding: 5rem 0 1rem 0;
-	font-size: 4rem;
+/* PAGE HEADER 
+====================================================================================================
+====================================================================================================
+*/
+body > header {
+	padding: 6rem 0 0 0;
+	text-align: center;
+}
+h1 {
+	font-size: 8rem;
+	line-height: 1;
 	font-weight: 900;
-	text-transform: uppercase;
-	color: #ffffff;
-}
-h2 { 
-	margin: 0 0 1rem 0;
-	font-size: 2.4rem;
-	font-weight: 900;	
-	color: #666666;
-	text-transform: uppercase; 
-}
-
-h3 { 
-	color: #777777;
-	margin: 2rem 0 0 0;
-	font-weight: 600; 
-	text-transform: uppercase;
-}
-h1 + h3 { margin-top: 0; }
-
-p:not(:last-child) { margin: 0 0 1.5rem 0; }
-strong { 
-	color: #777777;
-	font-weight: 500;
-}
-
-dl { margin-bottom: 2rem; }
-dt {
-	margin-right: 1rem;
-	clear: left;
-}
-dt, dd { 
-	float: left;
+	color: rgba(255,255,255,0.05);
 }
 
 
-
-/* HOW MIGHT I BUILD THIS ============================== */
-ol {
-	margin-bottom: 3rem;
-	counter-reset: buildStep;
-}
-ol li { 
-	padding: 1rem;
-	list-style-type: none;
-}
-ol li:nth-of-type(even) { background: rgba(0, 0, 0, 0.04); }
-ol li::before {
-	counter-increment: buildStep;
-	content: counter(buildStep);
+/* SECTION HEADERS
+==================================================================================================== 
+====================================================================================================
+*/
+section header {
 	display: inline-block;
-	margin-right: 1rem;
-	padding: 0 0.5rem;
-	border-right: solid 1px rgba(0, 0, 0, 0.1);
-	color: rgba(0, 0, 0, 0.35);
-}
-code {
-	display: inline-block;
-	padding: 0 0.25rem;
-	border: solid 1px #cccccc;
-	border-radius: 3px;
-}
-
-
-
-/* HEADER ============================== */
-header img {
-	max-width: calc(100% / 3);
-}
-
-/* ABOUT ============================== */
-#about {
-	padding: 0;
-	background: url(images/teamwork.jpg) no-repeat center;
-	background-size: cover;
-	border: solid 2rem #303030;
-	overflow: hidden;
-	text-align: right;
-}
-#about h1 { 
-	color: rgba(0, 0, 0, 0.65);
-	padding-right: 3rem; 
-	font-weight: 900;
-}
-#about p {
-	position: relative;
+	position: absolute;
 	z-index: 1;
-	margin: 0;
-	padding: 3rem;
-	padding-left: calc(100% / 3);
-	background: rgba(0, 0, 0, 0.65);
+	top: -3rem;
+	left: 50%;
+	transform: translateX(-50%);
 }
-#about p + p { padding-top: 0; }
-
-
-/* COMPONENTS ============================== */
-article {
-	position: relative;
-	margin-top: 3rem;
-	margin-bottom: 3rem;
-	padding: 3rem;
-	background: #fafafa;
-}
-article:nth-of-type(1) { margin-top: 0; }
-article.featured { border: solid 1rem #fabe0a; }
-article.featured::before {
-	content: "Featured";
-	display: block;
-	padding: 1rem 1.5rem;
-	position: absolute; top: 2.35rem; left: -8rem;
-	background: #fabe0a;
-	color: #ffffff;
-	text-transform: uppercase;
-
-    -ms-transform: rotate(-90deg);  
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);	
-}
-
-article img	{
-	display: block;
-	width: 100%;
-	margin-bottom: 3rem;
-	background: #cccccc;
-	border: solid 2px #eaeaea;
-}
-
-/* COMPONENT ACTIONS ============================== */
-.buttons li {
-	position: relative;
-	list-style-type: none;
+article header {
 	display: inline-block;
+	position: absolute;
+	z-index: 6;
+	top: 7rem;
+	left: 50%;
+	transform: translateX(-50%);
 }
-.buttons a, .button {
+
+section header::before, 
+section header::after,
+article header::before, 
+article header::after {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	bottom: 0.75rem;
+	width: 0;
+	height: 0;
+	border-top: solid 2.5rem #bdc3c7;
+	border-bottom: solid 2.5rem #bdc3c7;
+}
+section header::before,
+article header::before {
+	left: -3.5rem;
+	border-left: solid 2.5rem transparent;
+	border-right: solid 2.5rem #bdc3c7;
+}
+section header::after,
+article header::after { 
+	right: -3.5rem;
+	border-left: solid 2.5rem #bdc3c7;
+	border-right: solid 2.5rem transparent;
+}
+
+section header h2,
+article header h2 {
+	display: inline-block;
 	position: relative;
-	display: block;
-	padding: 1rem;
-	background: #cccccc;
+	top: 0;
+	z-index: 1;
+	margin: 0 auto 2rem auto;
+	padding: 1rem 4rem 0.5rem 4rem;
+	font-size: 3.5rem;
+	line-height: 1;
+	font-weight: 900;
 	color: #fafafa;
-	text-transform: uppercase;
+	text-align: center;
+	background: #bdc3c7;
+	border-bottom: solid 4px #7f8c8d;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);	
+}
+section header h2::before,
+section header h2::after,
+article header h2::before,
+article header h2::after {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: -1;
+	bottom: -1.75rem;
+	width: 0;
+	height: 0;
+	border-top: 1.5rem solid #7f8c8d;
+}
+section header h2::before,
+article header h2::before {
+	border-left: 1.5rem solid transparent;
+	left: 0rem;
+}
+section header h2::after,
+article header h2::after {
+	border-right: 1.5rem solid transparent;
+	right: 0rem;
+}
+
+
+
+
+
+/* PROJECTS 
+====================================================================================================
+====================================================================================================
+*/
+
+#projects {
+	max-width: none;
+	margin-top: 8rem;
+	padding: 12rem 0 4rem 0;
+	background: rgba(0,0,0,0.15) url('images/classy-fabric.png') repeat left top;
+	border-top: 2px solid rgba(255,255,255,0.15);
+	border-bottom: 2px solid rgba(255,255,255,0.15);
+	box-shadow: inset 0px 0px 6px rgba(0,0,0,0.5);
+	text-align: center;
+}
+#projects::before,
+#projects::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 4px;
+}
+#projects::before { 
+	top: 1rem; 
+	border-top: 2px dashed rgba(255,255,255,0.15);
+	border-bottom: 2px dashed rgba(255,255,255,0.05);
+}
+#projects::after { 
+	bottom: 1rem; 
+	border-bottom: 2px dashed rgba(255,255,255,0.15);
+	border-top: 2px dashed rgba(255,255,255,0.05);	
+}
+
+/* PROJECT ARTICLE ========== */
+#projects article {
+	position: relative;
+	height: 25rem;
+	margin-bottom: 3rem;
+	padding: 5rem 2rem;
+	background: rgba(0,0,0,0.1);
+	border: 5px solid #2c3e50;
+	text-align: center;
+	overflow: hidden;
+	transform: rotate(0);
+}
+
+/* PROJECT DESIGN COMPOSITES ========== */
+#projects .thumbnail {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	overflow: hidden;
+}
+.thumbnail img {
+	width: 100%;
+}
+
+#projects article:nth-of-type(1) {
+	background: url('images/HikersGuide.jpg') no-repeat center top;
+	background-size: cover;
+}
+/*
+#projects article:nth-of-type(2) {
+	background: url('images/App.jpg') no-repeat center top;
+	background-size: cover;
+}
+*/
+
+/* PROJECT TYPOGRAPHY ========== */
+#projects article h3,
+#projects article p {
+	position: relative;
+	bottom: 25rem;
+	transition: bottom 0.5s;
+}
+#projects article:hover h3,
+#projects article:hover p { bottom: 0; }
+#projects article:hover h3::before {
+	content: "";
+	display: block;
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.85);
+}
+
+/* PROJECT DOWNLOAD ========== */
+#projects a {
+	display: inline-block;
+	position: relative;
+	margin-top: 1rem;
+	padding: 0.75rem 1.5rem 0.25rem 1.5rem;
+	color: rgba(255,255,255,0.85);
+	background: #3498db;
+	border-bottom: 4px solid #2980b9;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+	border-radius: 3px;
+	font-style: normal;
+}
+#projects a:hover {
+	background: #2980b9;
 	text-decoration: none;
 }
-.buttons li:hover a, .button:hover { background: #888888; }
-.buttons strong { 
-	font-weight: 900;
-	color: #fafafa;
+
+
+#projects a::before {
+	content: "\f0ed";
+	display: inline-block;
+	margin-right: 0.5rem;
+	font: 1.5rem "FontAwesome";
+}
+#projects a:hover::after {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: calc(100% + 1rem);
+	left: calc(50% - 1rem);
+	display: block;
+	width: 0;
+	height: 0;
+	border-left: 1rem solid transparent;
+	border-right: 1rem solid transparent;
+	border-top: 1rem solid #3498db;
+	animation: shakeVert 0.5s 1;
 }
 
-.buttons a[href*=components] { background-color: #fabe0a; }
-.buttons a[href*=components]:hover { background-color: #e8b211; }
+@keyframes shakeVert {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(10px); }
+  75% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); } 
+}
 
 
-/* DROP-DOWN ============================== */
-.buttons a:not([href]) { padding-right: 3.5rem; }
-.buttons a:not([href])::after {
+
+
+/* RESPONSIVE ADJUSTMENTS ========== */
+/* ================================================== */
+@media (min-width: 640px) {
+	#projects { padding: 8rem 0 6rem 0; }
+	#projects article {
+		margin-bottom: 0;
+		width: calc(100% / 3 - (10rem / 3));
+		float: left;
+	}
+	#projects article:not(:nth-of-type(3n)) { 
+		margin-bottom: 0;
+		margin-right: 5rem; 
+	}
+	#projects article:not(:nth-of-type(3n))::after {
+		top: calc(50% - 2rem);
+		left: calc(100% + 1rem);
+	}
+}
+
+
+
+/* LESSONS 
+====================================================================================================
+====================================================================================================
+*/
+
+#lessons { 
+	margin-top: 20rem;
+	padding: 5rem 3rem;
+	counter-reset: buildStep; 
+}
+@media (min-width: 640px) {
+	#lessons { padding: 5rem 0; }
+}
+
+#lessons > header { top: -10rem; }
+
+#lessons::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: calc(50% - 0.5rem);
+	width: 1rem;
+	height: 100%;
+	background: #34495e;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+}
+
+
+#lessons ol::before,
+#lessons ol::after {
 	content: "";
 	display: block;
-	position: absolute; top: calc(50% - 0.35rem); right: 1rem;
-	width: 0; height: 0;
-	border-left: solid 0.7rem transparent;
-	border-right: solid 0.7rem transparent;
-	border-top: solid 0.7rem #eeeeee;
+	position: absolute;
+	left: calc(50% - 1.5rem);
+	z-index: 1;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	border: solid 0.75rem #34495e;
+}
+#lessons ol::before {
+	top: 0;
+	background: #2c3e50;
+}
+#lessons ol::after {
+	bottom: -3rem;
+	background: #34495e;
 }
 
-.buttons li:hover ul { display: block; }
-.buttons li ul {
-	display: none;
-	position: absolute; top: calc(100% - 1rem); left: 0;
-	z-index: 1;
-	margin-left: 0;
-	padding: 1rem;
-	background-color: #888888;
+/* LESSONS ============================================================ */
+#lessons ol > li {
+	position: relative;
+	margin: 2rem 0;
+	padding: 0 3rem 2rem 3rem;
+	background: #1e2d3c;
+	border: 3px solid #34495e;
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
 }
-.buttons ul li {
-	width: 100%;
-	border-left: none;
+@media (min-width: 640px) {
+	#lessons ol > li { 
+		background: rgba(0,0,0,0.1); 
+		border-left: none;
+		border-right: none;
+	}
+}
+
+.video {
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0.85);
+	text-align: center;
+}
+.video iframe {
+	box-sizing: content-box;
+	position: absolute;
+	top: 10rem;
+	left: 10rem;
+	z-index: 5;
+	width: calc(100% - 20rem);
+	height: calc(100% - 20rem);
+	border: 0.75rem solid rgba(255,255,255,0.15);
+}
+
+
+#lessons h3 {
+	position: relative;
+	width: calc(100% + 7rem);
+	margin: 2rem 0 2rem 0;
+	padding: 0.5rem;
+	color: rgba(255,255,255,0.85);
+	background: #f1c40f;
+	border-bottom: solid 4px #e0b711;
+	box-shadow: 0 0 10px 0 rgba(0,0,0,0.25);
+}
+#lessons h3::before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: calc(100% + 2px);
+	width: 0;
+	height: 0;
+	border-left: solid 1rem transparent;
+	border-right: solid 1rem transparent;
+	border-top: solid 1rem #e0b711;
+}
+#lessons h3::after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-top: solid 2.9rem transparent;
+	border-bottom: solid 2.9rem transparent;
+}
+
+
+
+#lessons ol > li::before {
+	counter-increment: buildStep;
+	content: counter(buildStep, decimal-leading-zero);
+	display: block;
+	position: absolute;
+	z-index: 1;
+	top: 2rem;
+	padding: 0.5rem 1.5rem 0 1.5rem;
+	background: rgba(255,255,255,0.95);
+	font-size: 3rem;
+	line-height: 4rem;
+	font-weight: 900;
+	color: rgba(0,0,0,0.5);
+	border-left: solid 4px rgba(0,0,0,0.05);
+}
+
+#lessons ol > li::after {
+	content: "";
+	position: absolute;
+	top: 10rem;
+	width: 10rem;
+	height: 10rem;
+	background: url('images/technologies.png') no-repeat;
+	background-size: 40rem auto;
+	filter: grayscale(100%);
+	opacity: 0.25;
+}
+#lessons ol > li:nth-of-type(1)::after { background-position: -30rem 0; }
+#lessons ol > li:nth-of-type(2)::after { background-position: 0 0; }
+#lessons ol > li:nth-of-type(3)::after { background-position: -20rem 0; }
+#lessons ol > li:nth-of-type(4)::after { background-position: -10rem 0; }
+#lessons ol > li:nth-of-type(5)::after { background-position: -20rem 0; }
+
+/* Odd Lessons */
+#lessons ol > li:nth-of-type(odd) h3 { 
+	left: -4.75rem;
+	padding-left: 12rem;
+	border-top-left-radius: 5px;
+}
+#lessons ol > li:nth-of-type(odd) h3::before { 
+	left: 0;
+	transform: rotate(-135deg);
+}
+#lessons ol > li:nth-of-type(odd) h3::after { 
+	border-left: solid 2.5rem #f1c40f; 
+	left: 100%;
+}
+#lessons ol > li:nth-of-type(odd)::before { left: 1rem; }
+#lessons ol > li:nth-of-type(odd)::after { right: calc(100% + 4rem); }
+
+/* Even Lessons */
+#lessons ol > li:nth-of-type(even) h3 { 
+	right: 2.25rem;
+	padding-right: 12rem;
+	border-top-right-radius: 5px;
+}
+#lessons ol > li:nth-of-type(even) h3::before { 
+	right: 0;
+	transform: rotate(135deg);
+}
+#lessons ol > li:nth-of-type(even) h3::after { 
+	border-right: solid 2.5rem #f1c40f; 
+	right: 100%;
+}
+#lessons ol > li:nth-of-type(even)::before { right: 1rem; }
+#lessons ol > li:nth-of-type(even)::after { left: calc(100% + 4rem); }
+
+@media (min-width: 640px) {
+	#lessons ol > li {
+		width: calc(50% - 5.5rem);
+	}
+
+	/* Odd Lessons */
+	#lessons ol > li:nth-of-type(odd) {
+		float: right;
+		margin-right: 5rem;
+		margin-left: calc(25% - 10rem); 
+		text-align: left;
+		border-right: 3px solid #34495e;
+	}
+	#lessons ol > li:nth-of-type(odd) h3 { left: -5.5rem; }
+	
+	/* Even Lessons */
+	#lessons ol > li:nth-of-type(even) {
+		float: left;
+		margin-left: 5rem;
+		margin-right: calc(25% - 10rem);
+		text-align: right;
+		border-left: 3px solid #34495e;
+	}
+	#lessons ol > li:nth-of-type(even) h3 { right: 1.5rem; }
+	
+}
+
+/* LINKS ( Level 1 ) ==================== */
+#lessons ul li {
+	position: relative;
+	z-index: 3;
+	display: inline-block;
+	margin: 2rem 0 1rem 0;
+	padding: 1rem 2rem 1rem 3rem;
+	background: #ecf0f1;
+	text-transform: uppercase;
+	text-align: left;
+	font-weight: 600;
+	color: rgba(0,0,0,0.5);
+	border-radius: 3px;
+}
+#lessons ul li:hover { 
+	z-index: 4;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+#lessons ul ul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2.5rem;
+    left: 1rem;
+    width: 0;
+    height: 0;
+    border-left: solid 0.7rem transparent;
+    border-right: solid 0.7rem transparent;
+    border-top: solid 0.7rem rgba(0,0,0,0.15);
+}
+
+/* LINKS ( Level 2 ) ==================== */
+#lessons ul li li {
+	display: none;
+	position: relative;
+	padding: 0;
+	border-radius: 0;
+	font-weight: 400;
+}
+#lessons li strong { font-weight: 600; }
+
+#lessons ul li li:hover {  }
+#lessons ul li li:last-of-type {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+#lessons ul ul {
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+#lessons ul li:hover li,
+#lessons ul li:focus li {
+	display: block;
+	margin: 0;
 	white-space: nowrap;
 }
-.buttons ul a {
-	margin: 0;
-	padding: 0.5rem 1rem 0.5rem 4rem;
-	font-weight: 400;
-	text-transform: none;
-	background: none;
-	color: #cccccc;
-	opacity: 0.5;
+
+
+
+/* LINKS ( Level 3 ) ==================== */
+#lessons ul ul ul {
+	left: 100%;
+	top: 0;
 }
-.buttons ul a:hover { opacity: 1; }
-.buttons ul a::before {
-	content: "";
-	position: absolute; top: 0.75rem; left: 1rem;
+
+
+#lessons ul li:hover li li,
+#lessons ul li:focus li li { display: none; }
+#lessons ul li li:hover li,
+#lessons ul li li:focus li { 
+	display: block; 
+
+}
+#lessons ul li li li a:hover {  }
+#lessons ul ul ul::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: -1.5rem;
+    width: 0;
+    height: 0;
+    border-top: solid 0.7rem transparent;
+    border-bottom: solid 0.7rem transparent;
+    border-left: solid 0.7rem rgba(0,0,0,0.15);
+}
+
+#lessons ul a {
 	display: block;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: url('images/icons.png') no-repeat left top;
-	background-size: 4.5rem 3rem;
-	opacity: 0.75;
+	padding: 1rem 4rem 1rem 2rem;
+	text-transform: capitalize;
+	color: inherit;
+	
 }
-.buttons ul a:hover::before {
-	background: url('images/icons.png') no-repeat left bottom;
-	background-size: 4.5rem 3rem;
+#lessons ul li li a {
+	padding: 0.5rem 3rem 0.5rem 1.25rem;
 }
-
-
-.buttons ul a[href*=youtube]::before {
-	background: url('images/icons.png') no-repeat center top;
-	background-size: 4.5rem 3rem;
-}
-.buttons ul a[href*=youtube]:hover::before {
-	background: url('images/icons.png') no-repeat center bottom;
-	background-size: 4.5rem 3rem;
+#lessons ul ul li:hover {
+	background: #3498db;
+	color: #ecf0f1;
 }
 
 
 
-a[href*=WSP-projectTemplate] {
-	display: inline-block;
-	padding-left: 4rem;
-	background: #fabe0a;	
-}
-a[href*=WSP-projectTemplate]::before {
-	content: "";
-	position: absolute; top: 1.25rem; left: 1rem;
-	display: block;
-	width: 1.5rem;
-	height: 1.5rem;
-	background: url('images/icons.png') no-repeat right top;
-	background-size: 4.5rem 3rem;
-	opacity: 0.75;
-}
+/* FOOTER
+==================================================================================================== 
+====================================================================================================
+*/
 
-
-/* FOOTER ============================== */
 footer {
-	padding: 0 2rem 4rem 2rem;
-	text-align: right;
-	font-size: 1.2rem;
-}
-footer a { 
-	color: inherit; 
-	font-weight: 700;
+	padding: 5rem;
+	text-align: center;
 }
 
+
+
+
+
+/* TYPOGRAPHY
+==================================================================================================== 
+====================================================================================================
+*/
+
+@font-face {
+  font-family: 'FontAwesome';
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/fontawesome-webfont.eot?v=4.3.0");
+  src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.3.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.3.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.3.0") format("truetype"), url("../fontawesome-webfont.svg?v=4.3.0#fontawesomeregular") format("svg"); }
+
+h1, h2, h3 { text-transform: uppercase; }
+p a {
+	color: #3498db;
+	font-style: italic;
+	font-weight: 500;
+	cursor: pointer;
+}
+p a:hover { text-decoration: underline; }
+
+@media (min-width: 640px) {
+	/*
+	h4::before, h4::after {
+		display: inline;
+		padding: 0 1rem;
+		color: #34495e;
+	}
+	h4::before { content: "<"; }
+	h4::after { content: ">"; }
+	*/
+}
+
+h3 {
+	font-size: 3rem;
+	font-weight: 600;
+}
+
+/* LINK ICONS ========== */
+#lessons ul a::before {
+	display: inline-block;
+	margin-right: 1rem;
+	font: 1.5rem "FontAwesome";
+	color: rgba(0,0,0,0.25);
+}
+#lessons ul a[href*=http]::before { content: "\f0ac"; }
+#lessons ul a[href*=youtube]::before { content: "\f03d"; }
+
+
+/* TYPOGRAPHY
+==================================================================================================== 
+====================================================================================================
+*/
+
+html { font-size: 62.5%; }
+body {
+	font: 300 1.6rem/1.5 "Alegreya Sans", Arial, sans-serif;
+	background: #2c3e50 url('images/cross-stripes.png') repeat left top;
+	color: #aaaaaa;
+}

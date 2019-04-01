@@ -1,0 +1,95 @@
+/* 
+================================================================================
+COMPONENT STYLESHEET
+================================================================================ */
+html, body { height: 100%; }
+
+html { font-size: 62.5% }
+body {
+	background: #f5f5f5 url('images/pw_maze_white.png') repeat left top;
+	font: 1.4em/1.6 sans-serif;
+	color: #b0b0b0;
+	min-height: 100%;
+}
+
+.wrapper {
+	min-height: calc(100% - 15rem);
+	text-align: center;
+}
+section { 
+	padding: 20rem 0; 
+	background: rgba(0, 0, 0, 0.1);
+}
+
+footer {
+	width: 100%;
+	position: relative;
+	padding: 5rem;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.5);
+}
+footer a { color: inherit; }
+footer a:hover { color: #fafafa; }
+
+
+/* CLEARFIX ======================================== */
+footer::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* BACK TO TOP ======================================== */
+footer p:first-child {
+	position: absolute; top: -3rem; right: 5rem;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;	
+	background: rgba(0, 0, 0, 0.5);
+}
+footer p:first-child a {
+	display: block;
+	width: 7rem;
+	height: 3rem;
+	background: url('images/arrow.png') no-repeat center 0.75rem;
+	background-size: 2rem;
+	text-indent: -9999px;
+	opacity: 0.3;
+}
+footer p:first-child a:hover { opacity: 1; }
+
+/* CONTACT INFO (Meta-Data) ======================================== */
+dt { display: none; }
+dd { display: block; }
+
+@media (min-width: 650px) {
+	dt, dd { display: inline-block; }
+	dt {
+		width: 2rem;
+		height: 2rem;
+		background: red;
+		margin: 0 1rem 0 4rem;
+		text-indent: -9999px;
+		opacity: 0.5;
+	}	
+	#email { background: url('images/envelope.png') no-repeat center center; background-size: 2rem; }
+	#address { background: url('images/pointer.png') no-repeat center center; background-size: 2rem; }
+	#phone { background: url('images/iphone.png') no-repeat center center; background-size: 2rem; }	
+}
+
+
+/* COPYRIGHT ======================================== */
+#copyright { 
+	clear: both;
+	margin: 2rem;
+	opacity: 0.5;
+}
+#copyright a::before {
+	content: "";
+	display: inline-block;
+	position: relative; top: 0.25rem;
+	width: 1px;
+	height: 1.75rem;
+	margin: 0 1rem 0 0.5rem;
+	background: rgba(255, 255, 255, 0.25);
+}

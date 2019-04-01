@@ -1,0 +1,188 @@
+{
+	"locations": [
+		{
+			"locationId": 11,
+			"city": "Las Vegas",
+			"state": "NV",
+			"title": "Red Rock Canyon National Conservation Area",
+			"text": "Natural wonder with red rocks draws those looking to hike, rock climb or go for a scenic drive."
+		},
+		{
+			"locationId": 18,
+			"city": "San Francisco",
+			"state": "CA",
+			"title": "Lands End Trail",
+			"text": "Lands End Trail is a 3.5 mile heavily trafficked loop trail located near San Francisco, CA that features beautiful wild flowers and is rated as moderate. The trail offers a number of activity options and is accessible from April until October. Dogs are also able to use this trail but must be kept on leash."
+		},
+		{
+			"locationId": 19,
+			"city": "Boston",
+			"state": "MA",
+			"title": "Middle Mountain",
+			"text": "Take a breather from hiking the Presidentials and take in New Hampshire's White Mountains from a whole new perspective."
+		},
+		{
+			"locationId": 31,
+			"city": "Washington",
+			"state": "DC",
+			"title": "Blue Ridge Mountain",
+			"text": "Blue Ridge Mountain vistas, river views, and a generous dose of Civil War history are all on tap at this West Virginia park."
+		},
+		{
+			"locationId": 53,
+			"city": "Seattle",
+			"state": "WA",
+			"title": "Rachel Lake",
+			"text": "he extra few miles after Snoqualmie Pass take you away from the most crowded hikes and get you to the spectacular 7.6mi Rachel Lake trail."
+		}
+	],
+	"posts": [
+	    {
+			"postId": 1,
+			"imageURL": "https://images.unsplash.com/photo-1444405406630-ac78b6e0b1fb",
+			"title": "Find Your Park in October",
+			"subtitle": "Rocky Mountain National Park, Colorado",
+			"text": "John Muir once said, “The mountains are calling and I must go.”  I know exactly what he means.  It was a childhood visit to the mountains that hooked me forever on wild places and national parks.  Whether it’s the beauty, or something else we can’t exactly put our finger on, mountains inspire us!  If you’re looking for a little inspiration for your family this fall, then consider heading to Rocky Mountain National Park in Colorado.",
+			"postDate": "2013-10-14",
+			"author": "Ann Smith",
+			"moreLink": "http::www.nps.gov/moro"
+	    },
+	    {
+			"postId":3,
+			"imageURL": "https://images.unsplash.com/photo-1510576180164-fa8819e2aa37",
+			"title": "That's Too heavy!",
+			"subtitle": "Just leave it behind.",
+			"text": "Do a Google search for hiking blogs and websites and I can practically guarantee that you’ll soon come across discussions about weight. If you were an ultralight backpacker prior to having children, you might be feeling a bit heavy these days. Certainly, having children along on a hike changes the way we prepare. However, I really want to encourage you to not completely overload yourself.",
+			"postDate": "2015-07-23",
+			"author": "Heidi"
+	    },
+	    {
+			"postId": 4,
+			"imageURL": "https://images.unsplash.com/photo-1496699319663-0792a6dac0b5",
+			"title": "AHS Efforts on the Hill",
+			"subtitle": "Energy Act",
+			"text": "American Hiking Society has been busily working on numerous pieces of legislation with the US Congress and one of the bills that’s been taking quite a bit of our time is the North American Energy Security and Infrastructure Act (S.2012). Why is AHS working on a bill that's primarily about energy? Because tucked into this large bill are items that are critically important to the entire hiking community': items such as permanent reauthorization of the Land and Water Conservation Fund (LWCF) and also funding to address the constant borrowing from Forest Service programs in order to pay for the increasing costs of wildfire suppression.",
+			"postDate": "2016-09-27",
+			"author": "Miles Jones"
+	    },
+	    {
+			"postId": 77,
+			"imageURL": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b",
+			"title": "About the Sierra High Route",
+			"subtitle": "",
+			"text": "The SHR is a 195-mile trekking route that runs north-south through the heart of the High Sierra, the crown jewel of the Sierra Nevada Range. It passes through two National Parks—Sequoia-Kings Canyon and Yosemite—and two wilderness areas—John Muir and Ansel Adams. It is a rugged alternate to the John Muir Trail (JMT), boasting about 100 miles of cross-country travel, numerous Class III scrambles, and seemingly endless miles of boulder fields. SHR hikers are rewarded with pristine alpine settings, uninterrupted stretches of solitude, and a sense of true adventure. The route was developed by climber Steve Roper back in the late-1970’s.",
+			"postDate": "2015-02-24",
+			"author": "Andrew Skurka"
+	    },
+	    {
+			"postId": 11,
+			"imageURL": "https://images.unsplash.com/photo-1503220317375-aaad61436b1b",
+			"title": "A Guide to Backpacking the Wonderland Trail",
+			"subtitle": "",
+			"text": "If you really want to know the answer to this question, of course, you’ll have to discover it for yourself. And there’s no better way to do that than by backpacking Washington’s iconic Wonderland Trail. This 93-mile loop circumnavigates the entire mountain, giving you a non-stop parade of jaw-dropping alpine scenery, all with the mighty 14,410 foot glaciated peak of Mount Rainier as the backdrop. What more could you ask for?",
+			"postDate": "2016-03-14",
+			"author": "Alison and Matt"
+	    },
+	    {
+			"postId": 23,
+			"imageURL": "https://images.unsplash.com/photo-1476455553758-5a8b16727e23",
+			"title": "Two Wildfires Burning in WNC",
+			"subtitle": "A saftey alert",
+			"text": "The USFS in North Carolina announced today that it is fighting two wildfires in the Great Smoky Mountains region - one near Sylva, and the other near Linville Gorge. ",
+			"postDate": "2016-08-25",
+			"author": "Jeff Hail"
+	    }
+	],
+	"events": [
+		{
+			"eventId": 101,
+			"sponsor": "",
+			"date": "2016-11-19",
+			"title": "Chattahoochee Challenge Adventure Race",
+			"text": "Starts at 9am November 19 in Uptown Columbus. This four-hour course includes biking, trekking, paddling, navigation and mystery events. Register at www.tricolumbusga.com orwww.active.com.",
+			"location": "1036 Broadway Columbus",
+			"state": "GA"
+		},
+		{
+			"eventId": 167,
+			"sponsor": "Earth Day Foundation",
+			"date": "2019-04-22",
+			"title": "The Race Against Extinction ",
+			"text": "Born to be Wild? Passionate about preserving what is Wild or what remains of our planet’s wilderness?",
+			"location": "ANY PLACE WASHINGTON MALL WASHINGTON",
+			"state": "DC"
+		},
+		{
+			"eventId": 187,
+			"sponsor": "",
+			"date": "2016-11-19",
+			"title": "Turkey Trek 5K Family Hike",
+			"text": "Get ready for turkey day! Turkey Trek is the final family 5K hike of the 2016 series! Bring family together for fun and exercise. We will join you as we hike the meadows of Forest Field Park and Bill Yeck Park for 3.1 miles.",
+			"location": "2100 East Centerville-Station Centerville",
+			"state": "OH"
+		},
+		{
+			"eventId": 211,
+			"sponsor": "Rockwood Nature",
+			"date": "2016-11-10",
+			"title": "Weekday Wanderer - Caledon State Park",
+			"text":"Return back to Caledon State Park and follow Boyd's Hole Trail and Potomac Overlook Trail to reach a bluff that overlooks the Potomac River. Have lunch on the bluff then return past Boyd's Hole Landing. This is an easy 5.5-mile hike along old forest roads. Bring a packable lunch.",
+			"location": " 3401 Courthouse Road North Chesterfield",
+			"state": "VA"
+		},
+		{
+			"eventId": 223,
+			"sponsor": "Majestic View Nature Center",
+			"date": "2016-11-05",
+			"title": "Veterans Appreciation Walk and Reception ",
+			"text": "Help recognize and honor the veterans of our community. On November 5th, the Saturday before Veterans Day, our community is encouraged to invite a veteran (or veterans) to join them in a short appreciation walk.",
+			"location": "7030 Garrison St. Arvada",
+			"state": "CO"
+		}
+	],
+	"hikers": [
+		{
+			"imageURL": "http://image.shutterstock.com/z/stock-photo-hikers-people-hiking-man-looking-at-mountain-nature-landscape-scenic-with-woman-in-background-247018417.jpg",
+			"firstname": "Bob",
+			"lastname": "Simmons",
+			"username": "bsimmons",
+			"city": "Orlando",
+			"state": "Fl",
+			"joinDate": "2016-10-23"
+		},
+		{
+			"imageURL": "http://previews.123rf.com/images/maridav/maridav1410/maridav141000109/32442153-Thumbs-up-happy-hikers-hiking-in-mountain-people-Cheering-hiker-couple-looking-at-camera-excited-in--Stock-Photo.jpg",
+			"firstname": "Sally",
+			"lastname": "Hilton",
+			"username": "sh45678",
+			"city": "St Louis",
+			"state": "MI",
+			"joinDate": "2016-09-12"
+		},
+		{
+			"imageURL": "http://dogsaholic.com/wp-content/uploads/2015/05/Dog-for-hiking-810x538.jpeg",
+			"firstname": "Ken",
+			"lastname": "Galvin",
+			"username": "k5hjuu",
+			"city": "Seattle",
+			"state": "WA",
+			"joinDate": "2016-05-02"
+		},
+		{
+			"imageURL": "http://previews.123rf.com/images/avemario/avemario1504/avemario150400040/39060025-Hikers-people-hiking-Bearded-active-man-standing-in-the-sunset-and-enjoying-the-golden-sunlight-Brut-Stock-Photo.jpg",
+			"firstname": "Dwaine",
+			"lastname": "Hammer",
+			"username": "dh5678",
+			"city": "San Francisco",
+			"state": "CA",
+			"joinDate": "2016-02-03"
+		}
+		
+	],
+	"about": {
+		"title": "Hikers Inc.",
+		"text": "is the leading digital network focused on outdoor enthusiasts, providing 1 million people monthly with the information and tools to discover top destinations near them.",
+		"copyright": "2001-2016 Hikers Inc. All Rights Reserved"
+	}
+	
+}

@@ -1,0 +1,279 @@
+/* Project CSS 
+============================================================
+============================================================*/
+html { font-size: 62.5%; }
+body {
+	margin: 0;
+	background: #252525;
+	font: 1.6em/1.4 sans-serif;
+	color: #999999;
+	font-weight: 100;
+}
+
+header, section, footer {
+	position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
+	
+}
+section, footer {
+	padding: 0 2rem;
+	background: #303030;
+}
+header::after, section::after, dl::after, footer::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
+h1 { 
+	margin: 0;
+	padding: 5rem 0 1rem 0;
+	font-size: 4rem;
+	font-weight: 900;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+h2 { 
+	margin: 0 0 1rem 0;
+	font-size: 2.4rem;
+	font-weight: 900;	
+	color: #666666;
+	text-transform: uppercase; 
+}
+
+h3 { 
+	color: #777777;
+	margin: 2rem 0 0 0;
+	font-weight: 600; 
+	text-transform: uppercase;
+}
+h1 + h3 { margin-top: 0; }
+
+p:not(:last-child) { margin: 0 0 1.5rem 0; }
+strong { 
+	color: #777777;
+	font-weight: 500;
+}
+
+dl { margin-bottom: 2rem; }
+dt {
+	margin-right: 1rem;
+	clear: left;
+}
+dt, dd { 
+	float: left;
+}
+
+
+
+/* HOW MIGHT I BUILD THIS ============================== */
+ol {
+	margin-bottom: 3rem;
+	counter-reset: buildStep;
+}
+ol li { 
+	padding: 1rem;
+	list-style-type: none;
+}
+ol li:nth-of-type(even) { background: rgba(0, 0, 0, 0.04); }
+ol li::before {
+	counter-increment: buildStep;
+	content: counter(buildStep);
+	display: inline-block;
+	margin-right: 1rem;
+	padding: 0 0.5rem;
+	border-right: solid 1px rgba(0, 0, 0, 0.1);
+	color: rgba(0, 0, 0, 0.35);
+}
+code {
+	display: inline-block;
+	padding: 0 0.25rem;
+	border: solid 1px #cccccc;
+	border-radius: 3px;
+}
+
+
+
+/* HEADER ============================== */
+header img {
+	max-width: calc(100% / 3);
+}
+
+/* ABOUT ============================== */
+#about {
+	padding: 0;
+	background: url(images/teamwork.jpg) no-repeat center;
+	background-size: cover;
+	border: solid 2rem #303030;
+	overflow: hidden;
+	text-align: right;
+}
+#about h1 { 
+	color: rgba(0, 0, 0, 0.65);
+	padding-right: 3rem; 
+	font-weight: 900;
+}
+#about p {
+	position: relative;
+	z-index: 1;
+	margin: 0;
+	padding: 3rem;
+	padding-left: calc(100% / 3);
+	background: rgba(0, 0, 0, 0.65);
+}
+#about p + p { padding-top: 0; }
+
+
+/* COMPONENTS ============================== */
+article {
+	position: relative;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
+	padding: 3rem;
+	background: #fafafa;
+}
+article:nth-of-type(1) { margin-top: 0; }
+article.featured { border: solid 1rem #fabe0a; }
+article.featured::before {
+	content: "Featured";
+	display: block;
+	padding: 1rem 1.5rem;
+	position: absolute; top: 2.35rem; left: -8rem;
+	background: #fabe0a;
+	color: #ffffff;
+	text-transform: uppercase;
+
+    -ms-transform: rotate(-90deg);  
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);	
+}
+
+article img	{
+	display: block;
+	width: 100%;
+	margin-bottom: 3rem;
+	background: #cccccc;
+	border: solid 2px #eaeaea;
+}
+
+/* COMPONENT ACTIONS ============================== */
+.buttons li {
+	position: relative;
+	list-style-type: none;
+	display: inline-block;
+}
+.buttons a, .button {
+	position: relative;
+	display: block;
+	padding: 1rem;
+	background: #cccccc;
+	color: #fafafa;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+.buttons li:hover a, .button:hover { background: #888888; }
+.buttons strong { 
+	font-weight: 900;
+	color: #fafafa;
+}
+
+.buttons a[href*=components] { background-color: #fabe0a; }
+.buttons a[href*=components]:hover { background-color: #e8b211; }
+
+
+/* DROP-DOWN ============================== */
+.buttons a:not([href]) { padding-right: 3.5rem; }
+.buttons a:not([href])::after {
+	content: "";
+	display: block;
+	position: absolute; top: calc(50% - 0.35rem); right: 1rem;
+	width: 0; height: 0;
+	border-left: solid 0.7rem transparent;
+	border-right: solid 0.7rem transparent;
+	border-top: solid 0.7rem #eeeeee;
+}
+
+.buttons li:hover ul { display: block; }
+.buttons li ul {
+	display: none;
+	position: absolute; top: calc(100% - 1rem); left: 0;
+	z-index: 1;
+	margin-left: 0;
+	padding: 1rem;
+	background-color: #888888;
+}
+.buttons ul li {
+	width: 100%;
+	border-left: none;
+	white-space: nowrap;
+}
+.buttons ul a {
+	margin: 0;
+	padding: 0.5rem 1rem 0.5rem 4rem;
+	font-weight: 400;
+	text-transform: none;
+	background: none;
+	color: #cccccc;
+	opacity: 0.5;
+}
+.buttons ul a:hover { opacity: 1; }
+.buttons ul a::before {
+	content: "";
+	position: absolute; top: 0.75rem; left: 1rem;
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: url('images/icons.png') no-repeat left top;
+	background-size: 4.5rem 3rem;
+	opacity: 0.75;
+}
+.buttons ul a:hover::before {
+	background: url('images/icons.png') no-repeat left bottom;
+	background-size: 4.5rem 3rem;
+}
+
+
+.buttons ul a[href*=youtube]::before {
+	background: url('images/icons.png') no-repeat center top;
+	background-size: 4.5rem 3rem;
+}
+.buttons ul a[href*=youtube]:hover::before {
+	background: url('images/icons.png') no-repeat center bottom;
+	background-size: 4.5rem 3rem;
+}
+
+
+
+a[href*=WSP-projectTemplate] {
+	display: inline-block;
+	padding-left: 4rem;
+	background: #fabe0a;	
+}
+a[href*=WSP-projectTemplate]::before {
+	content: "";
+	position: absolute; top: 1.25rem; left: 1rem;
+	display: block;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: url('images/icons.png') no-repeat right top;
+	background-size: 4.5rem 3rem;
+	opacity: 0.75;
+}
+
+
+/* FOOTER ============================== */
+footer {
+	padding: 0 2rem 4rem 2rem;
+	text-align: right;
+	font-size: 1.2rem;
+}
+footer a { 
+	color: inherit; 
+	font-weight: 700;
+}
+

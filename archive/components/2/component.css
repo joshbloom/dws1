@@ -1,0 +1,113 @@
+/* 
+================================================================================
+COMPONENT STYLESHEET
+================================================================================ */
+body {
+	background: #f5f5f5;
+	font: 16px sans-serif;
+	color: #909090;
+}
+h2 {
+	font-size: 1.4em;
+	color: #dfdfdf;
+	text-transform: uppercase;
+	font-weight: 900;
+}
+
+
+/* CLEARFIX ======================================== */
+section::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/* CTA SECTION ======================================== */
+#cta {
+	position: relative;
+	padding: 15em 2rem;
+	text-align: center;
+	overflow: hidden;
+}
+section::after {
+	content: "";
+	display: block;
+	position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    min-width: 100%;
+    min-height: 100%;	
+	z-index: 1;
+	background: rgba(0, 0, 0, 0.5);	
+}
+section *:not(video) { position: relative; z-index: 2; }
+
+/* BACKGROUND VIDEO ======================================== */
+#cta video { 
+	position: absolute; top: 50%; left: 50%;
+	z-index: -1;
+	min-width: 100%;
+	min-height: 100%;
+	width: auto;
+	height: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(images/bgSearch.jpg) no-repeat;
+    background-size: cover; 
+}
+@media screen and (max-device-width: 800px) {
+    #cta { background: url(images/bgSearch.jpg) #000 no-repeat center center; }
+    #cta video {
+        display: none;
+    }
+}
+
+
+/* SEARCH ======================================== */
+form { 
+	max-width: 600px;
+	margin: 0 auto;
+	padding: 20px 0; 
+}
+label { display: none; }
+
+
+input[type="text"] {
+	width: 100%;
+	padding: 1em;
+	background: #eaeaea;
+	border-radius: 5px;
+}
+input[type="text"]:focus { background: #ffffff; }
+
+button {
+	width: calc(100% / 3);
+	margin: 1rem 0;
+	padding: 1.35em 0;
+	background: #b0b0b0;
+	text-transform: uppercase;
+	font-weight: 900;
+	font-size: 0.8em;
+	border: none;
+	border-radius: 5px;
+	color: #ffffff;
+	cursor: pointer;
+}
+button:hover {
+	background: #909090;
+}
+
+@media (min-width: 600px) {
+	input, button { float: left; }
+	input[type="text"] {
+		width: calc(100% / 3 * 2);
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	button {
+		margin: 0;
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
+}
+
+
